@@ -78,7 +78,7 @@ static inline const vector<const string> rake(const unsigned short n) noexcept {
   return book_links;
 }
 
-int main () {
+static inline void update() noexcept {
   for (unsigned short i{1}; i <= limit; ++i) {
     const vector<const string>&  book_links{rake(i)};
     for (const auto &iter : book_links) {
@@ -94,6 +94,10 @@ int main () {
       }
     }
   }
+}
+
+int main () {
+  update();
 
   return EXIT_SUCCESS;
 }
