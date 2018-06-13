@@ -109,7 +109,7 @@ static inline void update_files() noexcept {
 }
 
 static inline void update_model() noexcept {
-  DIR* dirp = opendir(dir);
+  DIR* dirp{opendir(dir)};
 
   for (struct dirent* dp = readdir(dirp); dp != nullptr; dp = readdir(dirp)) {
     cout << dp->d_name << endl;
