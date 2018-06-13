@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta name="msvalidate.01" content="095D4FA2E4824BED6B22102FB8CE263E" />
+	<meta name="yandex-verification" content="e9a4e56df6df93bd" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109518968-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-109518968-1');
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta content="#494949" name="theme-color">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<title>Beginning XML, 4th Edition &#8211; Technology and Engineering eBooks</title>
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel='dns-prefetch' href='//it-eb.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Technology and Engineering eBooks &raquo; Feed" href="https://it-eb.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Technology and Engineering eBooks &raquo; Comments Feed" href="https://it-eb.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Technology and Engineering eBooks &raquo; Beginning XML, 4th Edition Comments Feed" href="https://it-eb.com/beginning-xml-4th-david-hunter-541/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/it-eb.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.2"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='cd-style-css'  href='http://it-eb.com/wp-content/themes/coldbox/style.css?ver=4.8.2' type='text/css' media='all' />
+<style id='cd-style-inline-css' type='text/css'>
+.prev .post-thumbnail{background-image:url("https://it-eb.com/covers/29/295a6b20b69e605f94e6b241938a2ea7.jpg")}
+.next .post-thumbnail{background-image:url("https://it-eb.com/covers/93/9302ff46bdf2ade2320924ee987120f6.jpg")}
+body { font-family: Source Sans Pro, Arial, sans-serif; }
+.entry a, .title-box a:hover, .post-meta a:hover, .post-meta.content-box a:hover, .post-btm-tags a:hover, p.post-btm-cats a:hover, .related-posts .post-category a, .related-posts .post:hover .post-title, .post-pages, .grid-view .post-inner a:hover .post-title, .standard-view .post-title:hover, ul.page-numbers, .widget #wp-calendar a, .widget .widgets-list-layout li:hover a, #comment-list .comment-author .fn a, #respond .logged-in-as a:hover, .comment-pages, .comment-pages a,.comment-pages span, .comment-body a, .comment-tabmenu .active > a, .standard-view .post-inner:hover .post-title, .widget .textwidget a { color: #494949; }
+			#comments input[type=submit], .post-tags a, .post-tags a, .main-archive .post-date, .action-bar, input[type=submit]:hover, input[type=submit]:focus, input[type=button]:hover, input[type=button]:focus, button[type=submit]:hover, button[type=submit]:focus, button[type=button]:hover, button[type=button]:focus { background-color: #494949; }
+			textarea:focus { border-color: #494949; }
+			.comment-pages > a:hover, .comment-pages span, .post-pages > a:hover>span,.post-pages>span, ul.page-numbers span.page-numbers.current, ul.page-numbers a.page-numbers:hover { border-bottom-color: #494949; }
+			::selection { background-color: #494949; }
+			::moz-selection { background-color: #494949; }
+.site-info,.site-title{color:#;}.site-description{color:rgb(10, 10, 10);}
+			#header-menu .menu-container > li > a{color:#}#header-menu .menu-container > li:hover > a{color:rgb(0, 0, -20)}
+			:root body .search-toggle span.icon.search{border-color:#}:root body .search-toggle span.icon.search::before,.nav-toggle .bottom, .nav-toggle .middle, .nav-toggle .top{background-color:#}
+</style>
+<link rel='stylesheet' id='child-style-css'  href='http://it-eb.com/wp-content/themes/iteb/style.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='FontAwesome-css'  href='http://it-eb.com/wp-content/themes/coldbox/fonts/fontawesome/css/font-awesome.min.css?ver=4.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='GoogleFonts-css'  href='//fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700&#038;ver=4.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='SourceSansPro-css'  href='//fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400%2C400i%2C600%2C600i%2C700&#038;ver=4.8.2' type='text/css' media='all' />
+<script type='text/javascript' src='http://it-eb.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://it-eb.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://it-eb.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://it-eb.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://it-eb.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Beginning Xcode: Swift Edition' href='https://it-eb.com/beginning-xcode-swift-matthew-knott-540/' />
+<link rel='next' title='Beginning XML' href='https://it-eb.com/beginning-xml-joe-fawcett-542/' />
+<meta name="generator" content="WordPress 4.8.2" />
+<link rel="canonical" href="https://it-eb.com/beginning-xml-4th-david-hunter-541/" />
+<link rel='shortlink' href='https://it-eb.com/?p=903' />
+<link rel="alternate" type="application/json+oembed" href="https://it-eb.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fit-eb.com%2Fbeginning-xml-4th-david-hunter-541%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://it-eb.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fit-eb.com%2Fbeginning-xml-4th-david-hunter-541%2F&#038;format=xml" />
+<!-- FAVHERO FAVICON START --><!-- For iPad with high-resolution Retina display running iOS ≥ 7: --><link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://it-eb.com/wp-content/uploads/2017/11/favicon-152.png"><!-- Standard: --><link rel="icon" sizes="152x152" href="https://it-eb.com/wp-content/uploads/2017/11/favicon-152.png"><meta name="msapplication-TileColor" content="#FFFFFF"><meta name="msapplication-TileImage" content="https://it-eb.com/wp-content/uploads/2017/11/favicon-144.png"><!-- For iPad with high-resolution Retina display running iOS ≤ 6: --><link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://it-eb.com/wp-content/uploads/2017/11/favicon-144.png"><!-- For iPhone with high-resolution Retina display running iOS ≥ 7: --><link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://it-eb.com/wp-content/uploads/2017/11/favicon-120.png"><!-- For first- and second-generation iPad: --><link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://it-eb.com/wp-content/uploads/2017/11/favicon-72.png"><!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: --><link rel="apple-touch-icon-precomposed" href="https://it-eb.com/wp-content/uploads/2017/11/favicon-57.png"><!-- FAVHERO FAVICON END --><link rel="pingback" href="http://it-eb.com/xmlrpc.php">
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		</head>
+
+<body class="post-template-default single single-post postid-903 single-format-standard wp-custom-logo header-menu-enabled sticky-header left-sidebar-s1 header-column">
+
+
+	<header id="header" class="header">
+
+		<div class="header-inner container">
+
+			<div class="site-info">
+				<h1 class="site-title">
+					<a href="https://it-eb.com" title="Technology and Engineering eBooks"><img src="https://it-eb.com/wp-content/uploads/2017/11/logo.png" alt="Technology and Engineering eBooks" /></a>				</h1>
+									<p class="site-description"></p>
+							</div>
+
+			<div class="search-toggle"><span class="icon search"></span></div>
+							<button class="nav-toggle header-menu" on="tap:amp-sidebar.open"><span class="top"></span><span class="middle"></span><span class="bottom"></span></button>
+						
+			<nav id="header-menu"><ul id="header-nav" class="menu-container"><li id="menu-item-11730" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11730"><a href="https://it-eb.com/category/big-data/">Big Data</a></li>
+<li id="menu-item-11732" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11732"><a href="https://it-eb.com/category/databases/">Databases</a></li>
+<li id="menu-item-11735" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11735"><a href="https://it-eb.com/category/hardware/">Hardware</a></li>
+<li id="menu-item-11737" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11737"><a href="https://it-eb.com/category/mobile-development/">Mobile Development</a></li>
+<li id="menu-item-11738" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11738"><a href="https://it-eb.com/category/networking/">Networking</a></li>
+<li id="menu-item-11741" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11741"><a href="https://it-eb.com/category/security/">Security</a></li>
+<li id="menu-item-11742" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11742"><a href="https://it-eb.com/category/software/">Software</a></li>
+<li id="menu-item-11747" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11747"><a href="https://it-eb.com/category/web-development/">Web Development</a></li>
+<li id="menu-item-11947" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-11947"><a href="#">Others</a>
+<ul class="sub-menu">
+	<li id="menu-item-11948" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11948"><a href="https://it-eb.com/category/algorithms/">Algorithms</a></li>
+	<li id="menu-item-11949" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11949"><a href="https://it-eb.com/category/cloud-computing/">Cloud Computing</a></li>
+	<li id="menu-item-11950" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11950"><a href="https://it-eb.com/category/computational-biology/">Computational Biology</a></li>
+	<li id="menu-item-11951" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11951"><a href="https://it-eb.com/category/computer-science/">Computer Science</a></li>
+	<li id="menu-item-11952" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11952"><a href="https://it-eb.com/category/computing/">Computing</a></li>
+	<li id="menu-item-11953" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11953"><a href="https://it-eb.com/category/data-management/">Data Management</a></li>
+	<li id="menu-item-11954" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11954"><a href="https://it-eb.com/category/data-mining/">Data Mining</a></li>
+	<li id="menu-item-11955" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11955"><a href="https://it-eb.com/category/debugging-and-troubleshooting/">Debugging and Troubleshooting</a></li>
+	<li id="menu-item-11956" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11956"><a href="https://it-eb.com/category/designing/">Designing</a></li>
+	<li id="menu-item-11957" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11957"><a href="https://it-eb.com/category/digital-design-media/">Digital Design/Media</a></li>
+	<li id="menu-item-11958" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11958"><a href="https://it-eb.com/category/engineering/">Engineering</a></li>
+	<li id="menu-item-11959" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11959"><a href="https://it-eb.com/category/hacking/">Hacking</a></li>
+	<li id="menu-item-11960" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11960"><a href="https://it-eb.com/category/image-processing/">Image Processing</a></li>
+	<li id="menu-item-11961" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11961"><a href="https://it-eb.com/category/internet-of-things/">Internet of Things</a></li>
+	<li id="menu-item-11962" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11962"><a href="https://it-eb.com/category/linux/">Linux</a></li>
+	<li id="menu-item-11963" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11963"><a href="https://it-eb.com/category/machine-learning/">Machine Learning</a></li>
+	<li id="menu-item-11964" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11964"><a href="https://it-eb.com/category/management/">Management</a></li>
+	<li id="menu-item-11965" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11965"><a href="https://it-eb.com/category/manual/">Manual</a></li>
+	<li id="menu-item-11966" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11966"><a href="https://it-eb.com/category/networking/">Networking</a></li>
+	<li id="menu-item-11967" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11967"><a href="https://it-eb.com/category/operating-systems/">Operating Systems</a></li>
+	<li id="menu-item-11968" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-11968"><a href="https://it-eb.com/category/programming/">Programming</a></li>
+	<li id="menu-item-11969" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11969"><a href="https://it-eb.com/category/resource-management/">Resource Management</a></li>
+	<li id="menu-item-11970" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11970"><a href="https://it-eb.com/category/robotics/">Robotics</a></li>
+	<li id="menu-item-11971" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11971"><a href="https://it-eb.com/category/scripting/">Scripting</a></li>
+	<li id="menu-item-11972" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11972"><a href="https://it-eb.com/category/security/">Security</a></li>
+	<li id="menu-item-11973" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11973"><a href="https://it-eb.com/category/seo/">SEO</a></li>
+	<li id="menu-item-11974" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11974"><a href="https://it-eb.com/category/signal-processing/">Signal Processing</a></li>
+	<li id="menu-item-11975" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11975"><a href="https://it-eb.com/category/software-quality/">Software Quality</a></li>
+	<li id="menu-item-11976" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11976"><a href="https://it-eb.com/category/sysadmin/">Sysadmin</a></li>
+	<li id="menu-item-11977" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11977"><a href="https://it-eb.com/category/telecommunications/">Telecommunications</a></li>
+	<li id="menu-item-11978" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11978"><a href="https://it-eb.com/category/testing/">Testing</a></li>
+	<li id="menu-item-11979" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11979"><a href="https://it-eb.com/category/tips-and-tricks/">Tips and Tricks</a></li>
+	<li id="menu-item-11981" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11981"><a href="https://it-eb.com/category/version-control/">Version Control</a></li>
+	<li id="menu-item-11980" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11980"><a href="https://it-eb.com/category/uncategorized/">Uncategorized</a></li>
+</ul>
+</li>
+</ul><!--/#header-nav--></nav>
+		</div>
+
+</header>
+
+
+	<main id="main" class="main-single">
+
+		<article id="post-903" class="main-inner post-903 post type-post status-publish format-standard hentry category-programming">
+
+				<header class="title-box">
+		<div class="title-box-inner container">
+			<div class="breadcrumb"><a href="https://it-eb.com">Home</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;<a href="https://it-eb.com/category/programming/" rel="category tag">Programming</a></div>
+			<h1 class="post-title">Beginning XML, 4th Edition</h1>
+		</div>
+	</header>
+	
+			<div class="container-outer">
+
+				<div class="container">
+
+					<div class="content">
+
+						<div class="content-inner">
+
+							<div class="content-inside">
+
+								<footer class="post-meta content-box">
+									
+									
+																			<time class="post-date" datetime="">October 21, 2017</time>
+									
+									
+									
+																	</footer>
+
+
+								<div class="entry content-box">
+																		<div class="book-cover"><img src="https://it-eb.com/covers/df/df6adbd96493d8b47f14d5a40c3e5a38.jpg"></div>
+									<div class="entry-inner"><div> When the first edition of this book was written, XML was a relatively new language but already gaining ground fast and becoming more and more widely used in a vast range of applications. By the time of the second edition, XML had already proven itself to be more than a passing fad, and was in fact being used throughout the industry for an incredibly wide range of uses. With the third edition, it was clear that XML was a mature technology, but more important, it became evident that the XML landscape was dividing into several areas of expertise. Now in this edition, we needed to categorize the increasing number of specifications surrounding XML, which either use XML or provide functionality in addition to the XML core specification.  </p>
+<p>So what is XML? It&#8217;s a markup language, used to describe the structure of data in meaningful ways. Anywhere that data is input/output, stored, or transmitted from one place to another, is a potential fit for XML&#8217;s capabilities. Perhaps the most well-known applications are web-related (especially with the latest developments in handheld web access—for which some of the technology is XML-based). However, there are many other non-web-based applications for which XML is useful—for example, as a replacement for (or to complement) traditional databases, or for the transfer of financial information between businesses. News organizations, along with individuals, have also been using XML to distribute syndicated news stories and blog entries.</p>
+<p>This book aims to teach you all you need to know about XML—what it is, how it works, what technologies surround it, and how it can best be used in a variety of situations, from simple data transfer to using XML in your web pages. It answers the fundamental questions:</p>
+<p>* What is XML?</p>
+<p>* How do you use XML?</p>
+<p>* How does it work?</p>
+<p>* What can you use it <i>for</i>, anyway?</p>
+<p>This book is for people who know that it would be a pretty good idea to learn XML but aren&#8217;t 100 percent sure why. You&#8217;ve heard the hype but haven&#8217;t seen enough substance to figure out what XML is and what it can do. You may be using development tools that try to hide the XML behind user interfaces and scripts, but you want to know what is really happening behind the scenes. You may already be somehow involved in web development and probably even know the basics of HTML, although neither of these qualifications is absolutely necessary for this book.</p>
+<p>What you don&#8217;t need is knowledge of markup languages in general. This book assumes that you&#8217;re new to the concept of markup languages, and we have structured it in a way that should make sense to the beginner and yet quickly bring you to XML expert status.</p>
+<p>The word &#8220;Beginning&#8221; in the title refers to the style of the book, rather than the reader&#8217;s experience level. There are two types of beginner for whom this book is ideal:</p>
+<p>* Programmers who are already familiar with some web programming or data exchange techniques. Programmers in this category will already understand some of the concepts discussed here, but you will learn how you can incorporate XML technologies to enhance those solutions you currently develop.</p>
+<p>* Those working in a programming environment but with no substantial knowledge or experience of web development or data exchange applications. In addition to learning how XML technologies can be applied to such applications, you will be introduced to some new concepts to help you understand how such systems work.</p>
+<p>The subjects covered in this book are arranged to take you from novice to expert in as logical a manner as we could. This Fourth Edition is structured in sections based on various areas of XML expertise. Unless you are already using XML, you should start by reading the introduction to XML in Part I. From there, you can quickly jump into specific areas of expertise, or, if you prefer, you can read through the book in order. Keep in mind that there is quite a lot of overlap in XML, and that some of the sections make use of techniques described elsewhere in the book.</p>
+<p>* The book begins by explaining what exactly XML is and why the industry felt that a language like this was needed.</p>
+<p>* After covering the <i>why</i>, the next logical step is the <i>how</i>, so it shows you how to create well-formed XML.</p>
+<p>* Once you understand the whys and hows of XML, you&#8217;ll go on to some more advanced things you can do when creating your XML documents, to make them not only well formed, but valid. (And you&#8217;ll learn what &#8220;valid&#8221; really means.)</p>
+<p>* After you&#8217;re comfortable with XML and have seen it in action, the book unleashes the programmer within and looks at an XML-based programming language that you can use to transform XML documents from one format to another.</p>
+<p>* Eventually, you will need to store and retrieve XML information from databases. At this point, you will learn not only the state of the art for XML and databases, but also how to query XML information using an SQL-like syntax called XQuery.</p>
+<p>* XML wouldn&#8217;t really be useful unless you could write programs to read the data in XML documents and create new XML documents, so we&#8217;ll get back to programming and look at a couple of ways that you can do that.</p>
+<p>* Understanding how to program and use XML within your own business is one thing, but sending that information to a business partner or publishing it to the Internet is another. You&#8217;ll learn about technologies that use XML that enable you to send messages across the Internet, publish information, and discover services that provide information.</p>
+<p>* Since you have all of this data in XML format, it would be great if you could easily display it to people, and it turns out you can. You&#8217;ll see an XML version of HTML called XHTML. You&#8217;ll also look at a technology you may already be using in conjunction with HTML documents called CSS. CSS enables you to add visual styles to your XML documents. In addition, you&#8217;ll learn how to design stunning graphics and make interactive forms using XML.</p>
+<p>* Finally, the book ends with a case study, which should help to give you ideas about how XML can be used in real-life situations, and which could be used in your own applications.</p>
+<p>This book builds on the strengths of the earlier editions, and provides new material to reflect the changes in the XML landscape—notably XQuery, RSS and Atom, and AJAX. Updates have been made to reflect the most recent versions of specifications and best practices throughout the book. In addition to the many changes, each chapter has a set of exercise questions to test your understanding of the material. Possible solutions to these questions appear in Appendix A.</p>
+<p><b>Part I: Introduction:</b> The introduction is where most readers should begin. The first three chapters introduce some of the goals of XML as well as the specific rules for constructing XML. Once you have read this part you should be able to read and create your own XML documents.</p>
+<p><b>Chapter 1: What Is XML?:</b> This chapter cover some basic concepts, introducing the fact that XML is a markup language (a bit like HTML) whereby you can define your own elements, tags, and attributes (known as a <i>vocabulary</i>). You&#8217;ll see that tags have no presentation meaning—they&#8217;re just a way to describe the structure of the data.</p>
+<p><b>Chapter 2: Well-Formed XML:</b> In addition to explaining what well-formed XML is, we offer a look at the rules that exist (the XML 1.0 and 1.1 Recommendations) for naming and structuring elements—you need to comply with these rules in order to produce well-formed XML.</p>
+<p><b>Chapter 3: XML Namespaces:</b> Because tags can be made up, you need to avoid name conflicts when sharing documents. Namespaces provide a way to uniquely identify a group of tags, using a URI. This chapter explains how to use namespaces.</p>
+<p><b>Part II: Validation:</b> In addition to the well-formedness rules you learn in Part I, you will most likely want to learn how to create and use different XML vocabularies. This Part introduces you to DTDs, XML Schemas, and RELAX NG: three languages that define custom XML vocabularies. It also shows you how to utilize these definitions to validate your XML documents.</p>
+<p><b>Chapter 4: Document Type Definitions:</b> You can specify how an XML document should be structured, and even provide default values, using Document Type Definitions (DTDs). If XML conforms to the associated DTD, it is known as <i>valid</i> XML. This chapter covers the basics of using DTDs.</p>
+<p><b>Chapter 5: XML Schemas:</b> XML Schemas, like DTDs, enable you to define how a document should be structured. In addition to defining document structure, they enable you to specify the individual datatypes of attribute values and element content. They are a more powerful alternative to DTDs.</p>
+<p><b>Chapter 6: RELAX NG:</b> RELAX NG is a third technology used to define the structure of documents. In addition to a new syntax and new features, it takes the best from XML Schemas and DTDs, and is therefore very simple and very powerful. RELAX NG has two syntaxes; both the full syntax and compact syntax are discussed.</p>
+<p><b>Part III: Processing:</b> In addition to defining and creating XML documents, you need to know how to work with documents to extract information and convert it to other formats. In fact, easily extracting information and converting it to other formats is what makes XML so powerful.</p>
+<p><b>Chapter 7: XPath:</b> The XPath language is used to locate sections and data in the XML document, and it’s important in many other XML technologies.</p>
+<p><b>Chapter 8: XSLT:</b> XML can be transformed into other XML documents, HTML, and other formats using XSLT stylesheets, which are introduced in this chapter.</p>
+<p><b>Part IV: Databases:</b> Creating and processing XML documents is good, but eventually you will want to store those documents. This section describes strategies for storing and retrieving XML documents and document fragments from different databases.</p>
+<p><b>Chapter 9: XQuery, the XML Query Language:</b> Very often, you will need to retrieve information from within a database. XQuery, which is built on XPath and XPath2, enables you to do this in an elegant way.</p>
+<p><b>Chapter 10: XML and Databases:</b> XML is perfect for structuring data, and some traditional databases are beginning to offer support for XML. This chapter discusses these, and provides a general overview of how XML can be used in an n-tier architecture. In addition, new databases based on XML are introduced.</p>
+<p><b>Part V: Programming:</b> At some point in your XML career, you will need to work with an XML document from within a custom application. The two most popular methodologies, the Document Object Model (DOM) and the Simple API for XML (SAX), are explained in this part.</p>
+<p><b>Chapter 11: The Document Object Model (DOM):</b> Programmers can use a variety of programming languages to manipulate XML using the Document Object Model&#8217;s objects, interfaces, methods, and properties, which are described in this chapter.</p>
+<p><b>Chapter 12: Simple API for XML (SAX):</b> An alternative to the DOM for programmatically manipulating XML data is to use the Simple API for XML (SAX) as an interface. This chapter shows how to use SAX and utilizes examples from the Java SAX API.</p>
+<p><b>Part VI: Communication:</b> Sending and receiving data from one computer to another is often difficult, but several technologies have been created to make communication with XML much easier. This part discusses RSS and content syndication, as well as web services and SOAP. This edition includes a new chapter on Ajax techniques.</p>
+<p><b>Chapter 13: RSS, Atom, and Content Syndication:</b> RSS is an actively evolving technology that is used to publish syndicated news stories and website summaries on the Internet. This chapter not only discusses how to use the different versions of RSS and Atom, it also covers the future direction of the technology. In addition, it demonstrates how to create a simple newsreader application that works with any of the currently published versions.</p>
+<p><b>Chapter 14: Web Services:</b> Web services enable you to perform cross-computer communications. This chapter describes web services and introduces you to using remote procedure calls in XML (using XML-RPC and REST), as well as giving you a brief look at major topics such as SOAP. Finally, it breaks down the assortment of specifications designed to work in conjunction with web services.</p>
+<p><b>Chapter 15: SOAP and WSDL:</b> Fundamental to XML web services, the Simple Object Access Protocol (SOAP) is one of the most popular specifications for allowing cross-computer communications. Using SOAP, you can package up XML documents and send them across the Internet to be processed. This chapter explains SOAP and the Web Services Description Language (WSDL) that is used to publish your service.</p>
+<p><b>Chapter 16: Ajax</b>: Ajax enables you to utilize JavaScript with web services and SOAP, or REST communications. Additionally, Ajax patterns can be used within web pages to communicate with the web server without refreshing. This chapter is new to the Fourth Edition.</p>
+<p><b>Part VII: Display:</b> Several XML technologies are devoted to displaying the data stored inside of an XML document. Some of these technologies are web-based, and some are designed for applications and mobile devices. This part discusses the primary display strategies and formats used today.</p>
+<p><b>Chapter 17: Cascading Style Sheets (CSS):</b> Website designers have long been using Cascading Style Sheets (CSS) with their HTML to easily make changes to a website’s presentation without having to touch the underlying HTML documents. This power is also available for XML, enabling you to display XML documents right in the browser. Or, if you need a bit more flexibility with your presentation, you can use XSLT to transform your XML to HTML or XHTML and then use CSS to style these documents.</p>
+<p><b>Chapter 18: XHTML:</b> XHTML is a new version of HTML that follows the rules of XML. This chapter discusses the differences between HTML and XHTML, and shows you how XHTML can help make your sites available to a wider variety of browsers, from legacy browsers to the latest browsers on mobile phones.</p>
+<p><b>Chapter 19: Scalable Vector Graphics (SVG):</b> Do you want to produce a custom graphic using XML? SVG enables you to describe a graphic using XML-based vector commands. This chapter teaches you the basics of SVG and then dives into a more complex SVG-based application that can be published to the Internet.</p>
+<p><b>Chapter 20: XForms:</b> XForms are XML-based forms that can be used to design desktop applications, paper-based forms, and of course XHTML-based forms. This chapter demonstrates both the basics and some of the more interesting uses of XForms.</p>
+<p><b>Part VIII: Case Study:</b> Throughout the book you’ll gain an understanding of how XML is used in web, business-to-business (B2B), data storage, and many other applications. The case study covers an example application and shows how the theory can be put into practice in real-life situations. The case study is new to this edition.</p>
+<p><b>Chapter 21: Case Study: Payment Calculator:</b> This case study explores some of the possibilities and strategies for using XML in your website. It includes an example that demonstrates a loan payment calculator by creating a web page using XHTML and CSS, communicating with a local web service using AJAX, utilizing an XML Schema to build data structures in .NET, and ultimately using the Document Object Model to display the results in SVG. An online version of this case study on the book&#8217;s website covers the same material using Ruby on Rails instead of .NET.</p>
+<p><b>Appendixes:</b> Appendix A provides answers to the exercise questions that appear throughout the book. The remaining appendixes provide reference material that you may find useful as you begin to apply the knowledge gained throughout the book in your own applications. These are: Appendix B: XPath Reference; Appendix C: XSLT Reference; Appendix D: The XML Document Object Model; Appendix E: XML Schema Element and Attribute Reference; Appendix F: XML Schema Datatypes Reference; Appendix G: SAX 2.0.2 Reference. Appendixes A, B, and C are included within the book; Appendixes D–G are available on the book&#8217;s website.</p>
+</div>
+</div>
+									<div class="book-details">
+										<h2>Book details</h2>
+										<ul>
+										<li><span>Authors:</span>Jeff Rafter, Eric van der Vlist, Jon Duckett, Andrew Watt, Linda McKinnon</li>										<li><span>Publisher:</span>Wrox</li>
+																				<li><span>Publication date:</span>May 21, 2007</li>										<li><span>ISBN-10:</span>0470114878</li>										<li><span>ISBN-13:</span>978-0470114872</li>										<li><span>Pages:</span>1080 pages</li>										<li><span>Format:</span>pdf</li>										<li><span>Size:</span>19.02Mb</li>										</ul>
+									</div>
+									<div class="download-box">
+										<a href="#" class='btn btn-download open-modal' data-modal="#modal1">Get Download Link</a>
+
+										<div class='modal' id='modal1'>
+											<div class='content-dl'>
+												<h2 class='title-dl'>Here's your download link</h2>
+												<input onClick="this.select();" type="text" name="dl-link" id="dl-link" value="generating download link..." readonly>
+												<a class='btn close-modal' data-modal="#modal1" href="#">Close</a>
+												<a class='btn go-to' data-modal="#modal1" href="#">Download</a>
+	</div>	
+</div>	
+									</div><!-- .download-box -->
+																		<div class="btm-post-meta">
+																					<p class="post-btm-cats"><span class="meta-label">Categories:</span><a href="https://it-eb.com/category/programming/" rel="category tag">Programming</a> </p>
+																													</div>
+																	</div>
+
+
+								
+
+
+	<section class="related-posts content-box">
+
+		<h4 class="related-head">Related Posts</h4>
+		<ul class="related-posts-list">
+
+
+			
+				<li class="related-article">
+					<article class="post-7066 post type-post status-publish format-standard hentry category-designing category-programming">
+
+						<figure class="post-thumbnail">
+							<a href="https://it-eb.com/design-software-developers-erik-klimczak-876/">
+								<img src="https://it-eb.com/covers/03/0367ca4745404c8db012ab91af4cbb1a.jpg" height="250" width="500">							</a>
+						</figure>
+
+						<div class="post-content">
+							<div class="post-category"><a href="https://it-eb.com/category/designing/" rel="category tag">Designing</a> / <a href="https://it-eb.com/category/programming/" rel="category tag">Programming</a></div>
+							<h5 class="post-title"><a href="https://it-eb.com/design-software-developers-erik-klimczak-876/">Design for Software: A Playbook for Developers</a></h5>
+						</div>
+
+					</article>
+				</li>
+
+			
+				<li class="related-article">
+					<article class="post-4388 post type-post status-publish format-standard hentry category-manual category-programming">
+
+						<figure class="post-thumbnail">
+							<a href="https://it-eb.com/cookbook-cookbooks-oreilly-lucas-carlson-4026/">
+								<img src="https://it-eb.com/covers/87/87f591962a75d881bd39d62644dc18f4.jpg" height="250" width="500">							</a>
+						</figure>
+
+						<div class="post-content">
+							<div class="post-category"><a href="https://it-eb.com/category/manual/" rel="category tag">Manual</a> / <a href="https://it-eb.com/category/programming/" rel="category tag">Programming</a></div>
+							<h5 class="post-title"><a href="https://it-eb.com/cookbook-cookbooks-oreilly-lucas-carlson-4026/">Ruby Cookbook (Cookbooks (O&#8217;Reilly))</a></h5>
+						</div>
+
+					</article>
+				</li>
+
+			
+				<li class="related-article">
+					<article class="post-5821 post type-post status-publish format-standard hentry category-computing category-data-management category-machine-learning category-programming">
+
+						<figure class="post-thumbnail">
+							<a href="https://it-eb.com/advances-visual-data-compression-communication-498/">
+								<img src="https://it-eb.com/covers/d7/d78a5d5b3528a8d03d11bb645c5a1745.jpg" height="250" width="500">							</a>
+						</figure>
+
+						<div class="post-content">
+							<div class="post-category"><a href="https://it-eb.com/category/computing/" rel="category tag">Computing</a> / <a href="https://it-eb.com/category/data-management/" rel="category tag">Data Management</a> / <a href="https://it-eb.com/category/machine-learning/" rel="category tag">Machine Learning</a> / <a href="https://it-eb.com/category/programming/" rel="category tag">Programming</a></div>
+							<h5 class="post-title"><a href="https://it-eb.com/advances-visual-data-compression-communication-498/">Advances in Visual Data Compression and Communication: Meeting the Requirements of New Applications (Multimedia Computing, Communication and Intelligence)</a></h5>
+						</div>
+
+					</article>
+				</li>
+
+			
+		</ul>
+
+	</section>
+
+
+
+<section id="comments" class="content-box">
+
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/beginning-xml-4th-david-hunter-541/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="http://it-eb.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" aria-required='true' required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" aria-required='true' required='required' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" /></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='903' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><div class="inv-recaptcha-holder"></div>			</form>
+			</div><!-- #respond -->
+	
+</section>
+
+<nav class="post-nav">
+
+	<ul>
+
+		<li class="prev"><a href="https://it-eb.com/beginning-xcode-swift-matthew-knott-540/" rel="prev"><div class="post-thumbnail"></div> <span class="chevron-left" aria-hidden="true"></span> <p class="nav-title">Prev Post</p> <p class="post-title">Beginning Xcode: Swift Edition</p></a></li><li class="next"><a href="https://it-eb.com/beginning-xml-joe-fawcett-542/" rel="next"><div class="post-thumbnail"></div> <span class="chevron-right" aria-hidden="true"></span> <p class="nav-title">Next Post</p> <p class="post-title">Beginning XML</p></a></li>
+	</ul>
+
+</nav>
+
+
+							</div><!--/.content-inside-->
+
+						</div><!--/.content-inner-->
+
+					</div><!--/.content-->
+
+					
+
+	<aside id="sidebar-s1" class="sidebar-s1">
+
+		<div class="sidebar">
+
+			<div class="sidebar-inner">
+
+				<section id="search-2" class="widget widget_search">
+<form method="get" class="search-form" action="https://it-eb.com/">
+	<input type="search" class="search-inner" name="s" placeholder="Title, ISBN, Author, Publisher, or whatever you come up with..." />
+	<button type="submit" class="search-submit"><i class="icon search"></i></button>
+</form>
+</section>		<section id="recent-posts-2" class="widget widget_recent_entries">		<h2 class="widget-title">Recent Posts</h2>		<ul>
+					<li>
+				<a href="https://it-eb.com/brief-history-everything-wireless-invisible-15/">A Brief History of Everything Wireless: How Invisible Waves Have Changed the World</a>
+						</li>
+					<li>
+				<a href="https://it-eb.com/computational-intelligence-introduction-andries-engelbrecht-10/">Computational Intelligence: An Introduction</a>
+						</li>
+					<li>
+				<a href="https://it-eb.com/counting-monitoring-large-scale-rfid-systems-9/">Tag Counting and Monitoring in Large-Scale RFID Systems: Theoretical Foundations and Algorithm Design</a>
+						</li>
+					<li>
+				<a href="https://it-eb.com/python-code-warrior-working-wmi-instrumentation-5/">Python Code Warrior-Working with WMI: Working Windows Management Instrumentation and creating reports By Example</a>
+						</li>
+					<li>
+				<a href="https://it-eb.com/python-tricks-buffet-awesome-features-4/">Python Tricks: A Buffet of Awesome Python Features</a>
+						</li>
+				</ul>
+		</section>		<section id="recent-comments-2" class="widget widget_recent_comments"><h2 class="widget-title">Recent Comments</h2><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">iteb</span> on <a href="https://it-eb.com/plug-php-solutions-practical-problems-329/#comment-71">Plug-In PHP: 100 Power Solutions: Simple Solutions to Practical PHP Problems</a></li><li class="recentcomments"><span class="comment-author-link">Cedric</span> on <a href="https://it-eb.com/plug-php-solutions-practical-problems-329/#comment-70">Plug-In PHP: 100 Power Solutions: Simple Solutions to Practical PHP Problems</a></li><li class="recentcomments"><span class="comment-author-link">iteb</span> on <a href="https://it-eb.com/learning-awk-programming-cutting-edge-text-processing-5/#comment-69">Learning AWK Programming: A fast, and simple cutting-edge utility for text-processing on the Unix-like environment</a></li><li class="recentcomments"><span class="comment-author-link">iteb</span> on <a href="https://it-eb.com/electronics-revolution-inventing-future-springer-19/#comment-68">The Electronics Revolution: Inventing the Future (Springer Praxis Books)</a></li><li class="recentcomments"><span class="comment-author-link">EB</span> on <a href="https://it-eb.com/electronics-revolution-inventing-future-springer-19/#comment-67">The Electronics Revolution: Inventing the Future (Springer Praxis Books)</a></li></ul></section><section id="categories-2" class="widget widget_categories"><h2 class="widget-title">Categories</h2>		<ul>
+	<li class="cat-item cat-item-19"><a href="https://it-eb.com/category/algorithms/" >Algorithms</a>
+</li>
+	<li class="cat-item cat-item-16"><a href="https://it-eb.com/category/big-data/" >Big Data</a>
+</li>
+	<li class="cat-item cat-item-35"><a href="https://it-eb.com/category/cloud-computing/" >Cloud Computing</a>
+</li>
+	<li class="cat-item cat-item-26"><a href="https://it-eb.com/category/computational-biology/" >Computational Biology</a>
+</li>
+	<li class="cat-item cat-item-31"><a href="https://it-eb.com/category/computer-science/" >Computer Science</a>
+</li>
+	<li class="cat-item cat-item-38"><a href="https://it-eb.com/category/computing/" >Computing</a>
+</li>
+	<li class="cat-item cat-item-46"><a href="https://it-eb.com/category/data-management/" >Data Management</a>
+</li>
+	<li class="cat-item cat-item-14"><a href="https://it-eb.com/category/data-mining/" >Data Mining</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://it-eb.com/category/databases/" >Databases</a>
+</li>
+	<li class="cat-item cat-item-45"><a href="https://it-eb.com/category/debugging-and-troubleshooting/" >Debugging and Troubleshooting</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="https://it-eb.com/category/designing/" >Designing</a>
+</li>
+	<li class="cat-item cat-item-41"><a href="https://it-eb.com/category/digital-design-media/" >Digital Design/Media</a>
+</li>
+	<li class="cat-item cat-item-37"><a href="https://it-eb.com/category/engineering/" >Engineering</a>
+</li>
+	<li class="cat-item cat-item-12"><a href="https://it-eb.com/category/game-development/" >Game Development</a>
+</li>
+	<li class="cat-item cat-item-33"><a href="https://it-eb.com/category/hacking/" >Hacking</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="https://it-eb.com/category/hardware/" >Hardware</a>
+</li>
+	<li class="cat-item cat-item-29"><a href="https://it-eb.com/category/image-processing/" >Image Processing</a>
+</li>
+	<li class="cat-item cat-item-47"><a href="https://it-eb.com/category/internet-of-things/" >Internet of Things</a>
+</li>
+	<li class="cat-item cat-item-15"><a href="https://it-eb.com/category/iot/" >IoT</a>
+</li>
+	<li class="cat-item cat-item-22"><a href="https://it-eb.com/category/linux/" >Linux</a>
+</li>
+	<li class="cat-item cat-item-32"><a href="https://it-eb.com/category/machine-learning/" >Machine Learning</a>
+</li>
+	<li class="cat-item cat-item-27"><a href="https://it-eb.com/category/management/" >Management</a>
+</li>
+	<li class="cat-item cat-item-34"><a href="https://it-eb.com/category/manual/" >Manual</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="https://it-eb.com/category/mobile-development/" >Mobile Development</a>
+</li>
+	<li class="cat-item cat-item-28"><a href="https://it-eb.com/category/netonets/" >NetoNets</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://it-eb.com/category/networking/" >Networking</a>
+</li>
+	<li class="cat-item cat-item-24"><a href="https://it-eb.com/category/operating-systems/" >Operating Systems</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="https://it-eb.com/category/programming/" >Programming</a>
+</li>
+	<li class="cat-item cat-item-18"><a href="https://it-eb.com/category/robotics/" >Robotics</a>
+</li>
+	<li class="cat-item cat-item-36"><a href="https://it-eb.com/category/sap/" >SAP</a>
+</li>
+	<li class="cat-item cat-item-43"><a href="https://it-eb.com/category/scripting/" >Scripting</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="https://it-eb.com/category/security/" >Security</a>
+</li>
+	<li class="cat-item cat-item-40"><a href="https://it-eb.com/category/seo/" >SEO</a>
+</li>
+	<li class="cat-item cat-item-30"><a href="https://it-eb.com/category/signal-processing/" >Signal Processing</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="https://it-eb.com/category/software/" >Software</a>
+</li>
+	<li class="cat-item cat-item-17"><a href="https://it-eb.com/category/software-development/" >Software Development</a>
+</li>
+	<li class="cat-item cat-item-25"><a href="https://it-eb.com/category/software-quality/" >Software Quality</a>
+</li>
+	<li class="cat-item cat-item-44"><a href="https://it-eb.com/category/sysadmin/" >Sysadmin</a>
+</li>
+	<li class="cat-item cat-item-13"><a href="https://it-eb.com/category/telecommunications/" >Telecommunications</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="https://it-eb.com/category/testing/" >Testing</a>
+</li>
+	<li class="cat-item cat-item-39"><a href="https://it-eb.com/category/tips-and-tricks/" >Tips and Tricks</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://it-eb.com/category/uncategorized/" >Uncategorized</a>
+</li>
+	<li class="cat-item cat-item-42"><a href="https://it-eb.com/category/version-control/" >Version Control</a>
+</li>
+	<li class="cat-item cat-item-2"><a href="https://it-eb.com/category/web-development/" >Web Development</a>
+</li>
+		</ul>
+</section>
+			</div>
+
+		</div>
+
+	</aside><!--/.sidebar-->
+
+
+				</div><!--/.container-->
+
+			</div><!--/.container-outer-->
+
+		</article>
+
+	</main>
+
+
+
+<footer id="footer" class="footer">
+	<div class="container">
+
+		<div class="copyright">
+
+			<p>
+				&copy;2018 <a href="https://it-eb.com">Technology and Engineering eBooks</a>			</p>
+
+							<p>
+					Powered by Wordpress. Theme: Coldbox.				</p>
+			
+		</div>
+
+		
+	</div><!--/.container-->
+
+	<a id="back-to-top" class="noscroll" href="#"><span class="chevron-up"></span></a>
+
+</footer>
+
+<div class="modal-search-form">
+<form method="get" class="search-form" action="https://it-eb.com/">
+	<input type="search" class="search-inner" name="s" placeholder="Title, ISBN, Author, Publisher, or whatever you come up with..." />
+	<button type="submit" class="search-submit"><i class="icon search"></i></button>
+</form>
+<div class="close-toggle"><span class="top"></span><span class="bottom"></span><span class="label">Close</span></div></div>
+
+
+<script type='text/javascript'>
+var renderInvisibleReCaptcha = function() {
+
+    for (var i = 0; i < document.forms.length; ++i) {
+        var form = document.forms[i];
+        var holder = form.querySelector('.inv-recaptcha-holder');
+
+        if (null === holder) continue;
+		holder.innerHTML = '';
+
+        (function(frm){
+			var cf7SubmitElm = frm.querySelector('.wpcf7-submit');
+            var holderId = grecaptcha.render(holder,{
+                'sitekey': '6LchVTgUAAAAAORGBFITAKda3kZT7sv3xgtP9n6n', 'size': 'invisible', 'badge' : 'bottomleft',
+                'callback' : function (recaptchaToken) {
+					((null !== cf7SubmitElm) && (typeof jQuery != 'undefined')) ? jQuery(frm).submit() : HTMLFormElement.prototype.submit.call(frm);
+                },
+                'expired-callback' : function(){grecaptcha.reset(holderId);}
+            });
+
+            frm.onsubmit = function (evt){evt.preventDefault();grecaptcha.execute(holderId);};
+
+			if(null !== cf7SubmitElm && (typeof jQuery != 'undefined') ){
+				jQuery(cf7SubmitElm).one('click', function(clickEvt){
+					clickEvt.preventDefault();
+					grecaptcha.execute(holderId);
+				});
+			}
+
+        })(form);
+    }
+};
+</script>
+<script type='text/javascript' async defer src='https://www.google.com/recaptcha/api.js?onload=renderInvisibleReCaptcha&#038;render=explicit&#038;hl=en'></script>
+<script type='text/javascript'>
+post_id = 903;
+</script>
+<script type='text/javascript' src='http://it-eb.com/wp-content/themes/iteb/custom.js?ver=1.1'></script>
+<script type='text/javascript' src='http://it-eb.com/wp-includes/js/comment-reply.min.js?ver=4.8.2'></script>
+<script type='text/javascript' src='http://it-eb.com/wp-content/themes/coldbox/assets/js/cd-scripts.min.js?ver=1.2.7'></script>
+<script type='text/javascript'>
+jQuery(function($) { $('.entry img').parent('a').css({'box-shadow':'none'}); });
+</script>
+<script type='text/javascript' src='http://it-eb.com/wp-includes/js/imagesloaded.min.js?ver=3.2.0'></script>
+<script type='text/javascript' src='http://it-eb.com/wp-includes/js/masonry.min.js?ver=3.3.2'></script>
+<script type='text/javascript'>
+jQuery(window).on("load resize",function(){window.matchMedia("(max-width: 980px) and (min-width: 641px)").matches||jQuery("body").hasClass("bottom-sidebar-s1")?jQuery("#sidebar-s1 .sidebar-inner").imagesLoaded(function(){jQuery("#sidebar-s1 .sidebar-inner").masonry({itemSelector:".widget",percentPosition:!0,isAnimated:!0}),jQuery(".widget").css({position:"absolute"})}):jQuery(".widget").css({position:"",top:"",left:""})});
+</script>
+<script type='text/javascript' src='http://it-eb.com/wp-includes/js/wp-embed.min.js?ver=4.8.2'></script>
+</body></html>
+

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta name="msvalidate.01" content="095D4FA2E4824BED6B22102FB8CE263E" />
+	<meta name="yandex-verification" content="e9a4e56df6df93bd" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109518968-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-109518968-1');
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta content="#494949" name="theme-color">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<title>Excel VBA Programming For Dummies &#8211; Technology and Engineering eBooks</title>
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel='dns-prefetch' href='//it-eb.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Technology and Engineering eBooks &raquo; Feed" href="https://it-eb.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Technology and Engineering eBooks &raquo; Comments Feed" href="https://it-eb.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Technology and Engineering eBooks &raquo; Excel VBA Programming For Dummies Comments Feed" href="https://it-eb.com/excel-programming-dummies-john-walkenbach-1274/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/it-eb.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.2"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='cd-style-css'  href='http://it-eb.com/wp-content/themes/coldbox/style.css?ver=4.8.2' type='text/css' media='all' />
+<style id='cd-style-inline-css' type='text/css'>
+.prev .post-thumbnail{background-image:url("https://it-eb.com/covers/01/01f6bac37738e4be6d14513906f16faa.jpg")}
+.next .post-thumbnail{background-image:url("https://it-eb.com/covers/f2/f203cbbb3025a33bec226fbc37d49dfe.jpg")}
+body { font-family: Source Sans Pro, Arial, sans-serif; }
+.entry a, .title-box a:hover, .post-meta a:hover, .post-meta.content-box a:hover, .post-btm-tags a:hover, p.post-btm-cats a:hover, .related-posts .post-category a, .related-posts .post:hover .post-title, .post-pages, .grid-view .post-inner a:hover .post-title, .standard-view .post-title:hover, ul.page-numbers, .widget #wp-calendar a, .widget .widgets-list-layout li:hover a, #comment-list .comment-author .fn a, #respond .logged-in-as a:hover, .comment-pages, .comment-pages a,.comment-pages span, .comment-body a, .comment-tabmenu .active > a, .standard-view .post-inner:hover .post-title, .widget .textwidget a { color: #494949; }
+			#comments input[type=submit], .post-tags a, .post-tags a, .main-archive .post-date, .action-bar, input[type=submit]:hover, input[type=submit]:focus, input[type=button]:hover, input[type=button]:focus, button[type=submit]:hover, button[type=submit]:focus, button[type=button]:hover, button[type=button]:focus { background-color: #494949; }
+			textarea:focus { border-color: #494949; }
+			.comment-pages > a:hover, .comment-pages span, .post-pages > a:hover>span,.post-pages>span, ul.page-numbers span.page-numbers.current, ul.page-numbers a.page-numbers:hover { border-bottom-color: #494949; }
+			::selection { background-color: #494949; }
+			::moz-selection { background-color: #494949; }
+.site-info,.site-title{color:#;}.site-description{color:rgb(10, 10, 10);}
+			#header-menu .menu-container > li > a{color:#}#header-menu .menu-container > li:hover > a{color:rgb(0, 0, -20)}
+			:root body .search-toggle span.icon.search{border-color:#}:root body .search-toggle span.icon.search::before,.nav-toggle .bottom, .nav-toggle .middle, .nav-toggle .top{background-color:#}
+</style>
+<link rel='stylesheet' id='child-style-css'  href='http://it-eb.com/wp-content/themes/iteb/style.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='FontAwesome-css'  href='http://it-eb.com/wp-content/themes/coldbox/fonts/fontawesome/css/font-awesome.min.css?ver=4.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='GoogleFonts-css'  href='//fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700&#038;ver=4.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='SourceSansPro-css'  href='//fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400%2C400i%2C600%2C600i%2C700&#038;ver=4.8.2' type='text/css' media='all' />
+<script type='text/javascript' src='http://it-eb.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://it-eb.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://it-eb.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://it-eb.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://it-eb.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Excel VBA Programming For Dummies' href='https://it-eb.com/excel-programming-dummies-john-walkenbach-1273/' />
+<link rel='next' title='Executable Specifications with Scrum: A Practical Guide to Agile Requirements Discovery' href='https://it-eb.com/executable-specifications-scrum-practical-requirements-1275/' />
+<meta name="generator" content="WordPress 4.8.2" />
+<link rel="canonical" href="https://it-eb.com/excel-programming-dummies-john-walkenbach-1274/" />
+<link rel='shortlink' href='https://it-eb.com/?p=1636' />
+<link rel="alternate" type="application/json+oembed" href="https://it-eb.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fit-eb.com%2Fexcel-programming-dummies-john-walkenbach-1274%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://it-eb.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fit-eb.com%2Fexcel-programming-dummies-john-walkenbach-1274%2F&#038;format=xml" />
+<!-- FAVHERO FAVICON START --><!-- For iPad with high-resolution Retina display running iOS ≥ 7: --><link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://it-eb.com/wp-content/uploads/2017/11/favicon-152.png"><!-- Standard: --><link rel="icon" sizes="152x152" href="https://it-eb.com/wp-content/uploads/2017/11/favicon-152.png"><meta name="msapplication-TileColor" content="#FFFFFF"><meta name="msapplication-TileImage" content="https://it-eb.com/wp-content/uploads/2017/11/favicon-144.png"><!-- For iPad with high-resolution Retina display running iOS ≤ 6: --><link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://it-eb.com/wp-content/uploads/2017/11/favicon-144.png"><!-- For iPhone with high-resolution Retina display running iOS ≥ 7: --><link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://it-eb.com/wp-content/uploads/2017/11/favicon-120.png"><!-- For first- and second-generation iPad: --><link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://it-eb.com/wp-content/uploads/2017/11/favicon-72.png"><!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: --><link rel="apple-touch-icon-precomposed" href="https://it-eb.com/wp-content/uploads/2017/11/favicon-57.png"><!-- FAVHERO FAVICON END --><link rel="pingback" href="http://it-eb.com/xmlrpc.php">
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		</head>
+
+<body class="post-template-default single single-post postid-1636 single-format-standard wp-custom-logo header-menu-enabled sticky-header left-sidebar-s1 header-column">
+
+
+	<header id="header" class="header">
+
+		<div class="header-inner container">
+
+			<div class="site-info">
+				<h1 class="site-title">
+					<a href="https://it-eb.com" title="Technology and Engineering eBooks"><img src="https://it-eb.com/wp-content/uploads/2017/11/logo.png" alt="Technology and Engineering eBooks" /></a>				</h1>
+									<p class="site-description"></p>
+							</div>
+
+			<div class="search-toggle"><span class="icon search"></span></div>
+							<button class="nav-toggle header-menu" on="tap:amp-sidebar.open"><span class="top"></span><span class="middle"></span><span class="bottom"></span></button>
+						
+			<nav id="header-menu"><ul id="header-nav" class="menu-container"><li id="menu-item-11730" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11730"><a href="https://it-eb.com/category/big-data/">Big Data</a></li>
+<li id="menu-item-11732" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11732"><a href="https://it-eb.com/category/databases/">Databases</a></li>
+<li id="menu-item-11735" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11735"><a href="https://it-eb.com/category/hardware/">Hardware</a></li>
+<li id="menu-item-11737" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11737"><a href="https://it-eb.com/category/mobile-development/">Mobile Development</a></li>
+<li id="menu-item-11738" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11738"><a href="https://it-eb.com/category/networking/">Networking</a></li>
+<li id="menu-item-11741" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11741"><a href="https://it-eb.com/category/security/">Security</a></li>
+<li id="menu-item-11742" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-11742"><a href="https://it-eb.com/category/software/">Software</a></li>
+<li id="menu-item-11747" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11747"><a href="https://it-eb.com/category/web-development/">Web Development</a></li>
+<li id="menu-item-11947" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-11947"><a href="#">Others</a>
+<ul class="sub-menu">
+	<li id="menu-item-11948" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11948"><a href="https://it-eb.com/category/algorithms/">Algorithms</a></li>
+	<li id="menu-item-11949" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11949"><a href="https://it-eb.com/category/cloud-computing/">Cloud Computing</a></li>
+	<li id="menu-item-11950" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11950"><a href="https://it-eb.com/category/computational-biology/">Computational Biology</a></li>
+	<li id="menu-item-11951" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11951"><a href="https://it-eb.com/category/computer-science/">Computer Science</a></li>
+	<li id="menu-item-11952" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11952"><a href="https://it-eb.com/category/computing/">Computing</a></li>
+	<li id="menu-item-11953" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11953"><a href="https://it-eb.com/category/data-management/">Data Management</a></li>
+	<li id="menu-item-11954" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11954"><a href="https://it-eb.com/category/data-mining/">Data Mining</a></li>
+	<li id="menu-item-11955" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11955"><a href="https://it-eb.com/category/debugging-and-troubleshooting/">Debugging and Troubleshooting</a></li>
+	<li id="menu-item-11956" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11956"><a href="https://it-eb.com/category/designing/">Designing</a></li>
+	<li id="menu-item-11957" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11957"><a href="https://it-eb.com/category/digital-design-media/">Digital Design/Media</a></li>
+	<li id="menu-item-11958" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11958"><a href="https://it-eb.com/category/engineering/">Engineering</a></li>
+	<li id="menu-item-11959" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11959"><a href="https://it-eb.com/category/hacking/">Hacking</a></li>
+	<li id="menu-item-11960" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11960"><a href="https://it-eb.com/category/image-processing/">Image Processing</a></li>
+	<li id="menu-item-11961" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11961"><a href="https://it-eb.com/category/internet-of-things/">Internet of Things</a></li>
+	<li id="menu-item-11962" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11962"><a href="https://it-eb.com/category/linux/">Linux</a></li>
+	<li id="menu-item-11963" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11963"><a href="https://it-eb.com/category/machine-learning/">Machine Learning</a></li>
+	<li id="menu-item-11964" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11964"><a href="https://it-eb.com/category/management/">Management</a></li>
+	<li id="menu-item-11965" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-11965"><a href="https://it-eb.com/category/manual/">Manual</a></li>
+	<li id="menu-item-11966" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11966"><a href="https://it-eb.com/category/networking/">Networking</a></li>
+	<li id="menu-item-11967" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11967"><a href="https://it-eb.com/category/operating-systems/">Operating Systems</a></li>
+	<li id="menu-item-11968" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-11968"><a href="https://it-eb.com/category/programming/">Programming</a></li>
+	<li id="menu-item-11969" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11969"><a href="https://it-eb.com/category/resource-management/">Resource Management</a></li>
+	<li id="menu-item-11970" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11970"><a href="https://it-eb.com/category/robotics/">Robotics</a></li>
+	<li id="menu-item-11971" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11971"><a href="https://it-eb.com/category/scripting/">Scripting</a></li>
+	<li id="menu-item-11972" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11972"><a href="https://it-eb.com/category/security/">Security</a></li>
+	<li id="menu-item-11973" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11973"><a href="https://it-eb.com/category/seo/">SEO</a></li>
+	<li id="menu-item-11974" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11974"><a href="https://it-eb.com/category/signal-processing/">Signal Processing</a></li>
+	<li id="menu-item-11975" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11975"><a href="https://it-eb.com/category/software-quality/">Software Quality</a></li>
+	<li id="menu-item-11976" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11976"><a href="https://it-eb.com/category/sysadmin/">Sysadmin</a></li>
+	<li id="menu-item-11977" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11977"><a href="https://it-eb.com/category/telecommunications/">Telecommunications</a></li>
+	<li id="menu-item-11978" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11978"><a href="https://it-eb.com/category/testing/">Testing</a></li>
+	<li id="menu-item-11979" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11979"><a href="https://it-eb.com/category/tips-and-tricks/">Tips and Tricks</a></li>
+	<li id="menu-item-11981" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11981"><a href="https://it-eb.com/category/version-control/">Version Control</a></li>
+	<li id="menu-item-11980" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11980"><a href="https://it-eb.com/category/uncategorized/">Uncategorized</a></li>
+</ul>
+</li>
+</ul><!--/#header-nav--></nav>
+		</div>
+
+</header>
+
+
+	<main id="main" class="main-single">
+
+		<article id="post-1636" class="main-inner post-1636 post type-post status-publish format-standard hentry category-manual category-programming category-software">
+
+				<header class="title-box">
+		<div class="title-box-inner container">
+			<div class="breadcrumb"><a href="https://it-eb.com">Home</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;<a href="https://it-eb.com/category/manual/" rel="category tag">Manual</a> &#47; <a href="https://it-eb.com/category/programming/" rel="category tag">Programming</a> &#47; <a href="https://it-eb.com/category/software/" rel="category tag">Software</a></div>
+			<h1 class="post-title">Excel VBA Programming For Dummies</h1>
+		</div>
+	</header>
+	
+			<div class="container-outer">
+
+				<div class="container">
+
+					<div class="content">
+
+						<div class="content-inner">
+
+							<div class="content-inside">
+
+								<footer class="post-meta content-box">
+									
+									
+																			<time class="post-date" datetime="">October 21, 2017</time>
+									
+									
+									
+																	</footer>
+
+
+								<div class="entry content-box">
+																		<div class="book-cover"><img src="https://it-eb.com/covers/c7/c7c0f1e09c8b453fe1f606be73b8dbe2.jpg"></div>
+									<div class="entry-inner"><div>
+<p><b>Take control of your spreadsheets and use VBA to create your own custom Excel applications</b></p>
+<p>Author and Excel guru John Walkenbach, known to his devoted fans as &#8220;Mr. Spreadsheet,&#8221; guides you through taking your Excel skills to the next level by creating your own customized spreadsheet solutions using Visual Basic for Applications (VBA). This updated edition of this bestselling book shows you how to use VBA, write macros, customize your Excel apps to look and work the way you want, avoid errors, and more.</p>
+<ul>
+<li>Introduces you to a wide array of new Excel 2013 options, beginning with the most important tools and operations for the Visual Basic Editor</li>
+<li>Provides an overview of the essential elements and concepts for programming with Excel, including using VBA to customize your applications and automate functions</li>
+<li>Shares techniques for handling errors, debugging, working with range objects, controlling flow, and much more</li>
+<li>Zeroes in on creating custom dialog boxes, toolbars, and menus</li>
+</ul>
+<p>Add a personal touch to your spreadsheets and present your data the way you want with <i>Excel VBA Programming For Dummies, 3rd Edition</i>.</p>
+</div>
+</div>
+									<div class="book-details">
+										<h2>Book details</h2>
+										<ul>
+										<li><span>Authors:</span>John Walkenbach</li>										<li><span>Publisher:</span>For Dummies</li>
+																				<li><span>Publication date:</span>February 25, 2013</li>										<li><span>ISBN-10:</span>1118490371</li>										<li><span>ISBN-13:</span>978-1118490372</li>										<li><span>Pages:</span>408 pages</li>										<li><span>Format:</span>pdf</li>										<li><span>Size:</span>10.94Mb</li>										</ul>
+									</div>
+									<div class="download-box">
+										<a href="#" class='btn btn-download open-modal' data-modal="#modal1">Get Download Link</a>
+
+										<div class='modal' id='modal1'>
+											<div class='content-dl'>
+												<h2 class='title-dl'>Here's your download link</h2>
+												<input onClick="this.select();" type="text" name="dl-link" id="dl-link" value="generating download link..." readonly>
+												<a class='btn close-modal' data-modal="#modal1" href="#">Close</a>
+												<a class='btn go-to' data-modal="#modal1" href="#">Download</a>
+	</div>	
+</div>	
+									</div><!-- .download-box -->
+																		<div class="btm-post-meta">
+																					<p class="post-btm-cats"><span class="meta-label">Categories:</span><a href="https://it-eb.com/category/manual/" rel="category tag">Manual</a>&#8203;<a href="https://it-eb.com/category/programming/" rel="category tag">Programming</a>&#8203;<a href="https://it-eb.com/category/software/" rel="category tag">Software</a> </p>
+																													</div>
+																	</div>
+
+
+								
+
+
+	<section class="related-posts content-box">
+
+		<h4 class="related-head">Related Posts</h4>
+		<ul class="related-posts-list">
+
+
+			
+				<li class="related-article">
+					<article class="post-6078 post type-post status-publish format-standard hentry category-manual category-software">
+
+						<figure class="post-thumbnail">
+							<a href="https://it-eb.com/flash-facebook-cookbook-james-ford-755/">
+								<img src="https://it-eb.com/covers/52/527eaf1b2964cb0b924676bf7b8b8f18.jpg" height="250" width="500">							</a>
+						</figure>
+
+						<div class="post-content">
+							<div class="post-category"><a href="https://it-eb.com/category/manual/" rel="category tag">Manual</a> / <a href="https://it-eb.com/category/software/" rel="category tag">Software</a></div>
+							<h5 class="post-title"><a href="https://it-eb.com/flash-facebook-cookbook-james-ford-755/">Flash Facebook Cookbook</a></h5>
+						</div>
+
+					</article>
+				</li>
+
+			
+				<li class="related-article">
+					<article class="post-4732 post type-post status-publish format-standard hentry category-programming category-testing">
+
+						<figure class="post-thumbnail">
+							<a href="https://it-eb.com/test-driven-infrastructure-chef-behavior-driven-development-4370/">
+								<img src="https://it-eb.com/covers/41/412391763170947033e9aec692d8ab4f.jpg" height="250" width="500">							</a>
+						</figure>
+
+						<div class="post-content">
+							<div class="post-category"><a href="https://it-eb.com/category/programming/" rel="category tag">Programming</a> / <a href="https://it-eb.com/category/testing/" rel="category tag">Testing</a></div>
+							<h5 class="post-title"><a href="https://it-eb.com/test-driven-infrastructure-chef-behavior-driven-development-4370/">Test-Driven Infrastructure with Chef: Bring Behavior-Driven Development to Infrastructure as Code</a></h5>
+						</div>
+
+					</article>
+				</li>
+
+			
+				<li class="related-article">
+					<article class="post-2731 post type-post status-publish format-standard hentry category-manual category-programming">
+
+						<figure class="post-thumbnail">
+							<a href="https://it-eb.com/learning-predictive-analytics-eric-mayor-2369/">
+								<img src="https://it-eb.com/covers/be/be42a9c040896780dd75cc239e1dcd8a.jpg" height="250" width="500">							</a>
+						</figure>
+
+						<div class="post-content">
+							<div class="post-category"><a href="https://it-eb.com/category/manual/" rel="category tag">Manual</a> / <a href="https://it-eb.com/category/programming/" rel="category tag">Programming</a></div>
+							<h5 class="post-title"><a href="https://it-eb.com/learning-predictive-analytics-eric-mayor-2369/">Learning Predictive Analytics with R</a></h5>
+						</div>
+
+					</article>
+				</li>
+
+			
+		</ul>
+
+	</section>
+
+
+
+<section id="comments" class="content-box">
+
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/excel-programming-dummies-john-walkenbach-1274/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="http://it-eb.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" aria-required='true' required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" aria-required='true' required='required' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" /></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='1636' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><div class="inv-recaptcha-holder"></div>			</form>
+			</div><!-- #respond -->
+	
+</section>
+
+<nav class="post-nav">
+
+	<ul>
+
+		<li class="prev"><a href="https://it-eb.com/excel-programming-dummies-john-walkenbach-1273/" rel="prev"><div class="post-thumbnail"></div> <span class="chevron-left" aria-hidden="true"></span> <p class="nav-title">Prev Post</p> <p class="post-title">Excel VBA Programming For Dummies</p></a></li><li class="next"><a href="https://it-eb.com/executable-specifications-scrum-practical-requirements-1275/" rel="next"><div class="post-thumbnail"></div> <span class="chevron-right" aria-hidden="true"></span> <p class="nav-title">Next Post</p> <p class="post-title">Executable Specifications with Scrum: A Practical Guide to Agile Requirements Discovery</p></a></li>
+	</ul>
+
+</nav>
+
+
+							</div><!--/.content-inside-->
+
+						</div><!--/.content-inner-->
+
+					</div><!--/.content-->
+
+					
+
+	<aside id="sidebar-s1" class="sidebar-s1">
+
+		<div class="sidebar">
+
+			<div class="sidebar-inner">
+
+				<section id="search-2" class="widget widget_search">
+<form method="get" class="search-form" action="https://it-eb.com/">
+	<input type="search" class="search-inner" name="s" placeholder="Title, ISBN, Author, Publisher, or whatever you come up with..." />
+	<button type="submit" class="search-submit"><i class="icon search"></i></button>
+</form>
+</section>		<section id="recent-posts-2" class="widget widget_recent_entries">		<h2 class="widget-title">Recent Posts</h2>		<ul>
+					<li>
+				<a href="https://it-eb.com/brief-history-everything-wireless-invisible-15/">A Brief History of Everything Wireless: How Invisible Waves Have Changed the World</a>
+						</li>
+					<li>
+				<a href="https://it-eb.com/computational-intelligence-introduction-andries-engelbrecht-10/">Computational Intelligence: An Introduction</a>
+						</li>
+					<li>
+				<a href="https://it-eb.com/counting-monitoring-large-scale-rfid-systems-9/">Tag Counting and Monitoring in Large-Scale RFID Systems: Theoretical Foundations and Algorithm Design</a>
+						</li>
+					<li>
+				<a href="https://it-eb.com/python-code-warrior-working-wmi-instrumentation-5/">Python Code Warrior-Working with WMI: Working Windows Management Instrumentation and creating reports By Example</a>
+						</li>
+					<li>
+				<a href="https://it-eb.com/python-tricks-buffet-awesome-features-4/">Python Tricks: A Buffet of Awesome Python Features</a>
+						</li>
+				</ul>
+		</section>		<section id="recent-comments-2" class="widget widget_recent_comments"><h2 class="widget-title">Recent Comments</h2><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">iteb</span> on <a href="https://it-eb.com/plug-php-solutions-practical-problems-329/#comment-71">Plug-In PHP: 100 Power Solutions: Simple Solutions to Practical PHP Problems</a></li><li class="recentcomments"><span class="comment-author-link">Cedric</span> on <a href="https://it-eb.com/plug-php-solutions-practical-problems-329/#comment-70">Plug-In PHP: 100 Power Solutions: Simple Solutions to Practical PHP Problems</a></li><li class="recentcomments"><span class="comment-author-link">iteb</span> on <a href="https://it-eb.com/learning-awk-programming-cutting-edge-text-processing-5/#comment-69">Learning AWK Programming: A fast, and simple cutting-edge utility for text-processing on the Unix-like environment</a></li><li class="recentcomments"><span class="comment-author-link">iteb</span> on <a href="https://it-eb.com/electronics-revolution-inventing-future-springer-19/#comment-68">The Electronics Revolution: Inventing the Future (Springer Praxis Books)</a></li><li class="recentcomments"><span class="comment-author-link">EB</span> on <a href="https://it-eb.com/electronics-revolution-inventing-future-springer-19/#comment-67">The Electronics Revolution: Inventing the Future (Springer Praxis Books)</a></li></ul></section><section id="categories-2" class="widget widget_categories"><h2 class="widget-title">Categories</h2>		<ul>
+	<li class="cat-item cat-item-19"><a href="https://it-eb.com/category/algorithms/" >Algorithms</a>
+</li>
+	<li class="cat-item cat-item-16"><a href="https://it-eb.com/category/big-data/" >Big Data</a>
+</li>
+	<li class="cat-item cat-item-35"><a href="https://it-eb.com/category/cloud-computing/" >Cloud Computing</a>
+</li>
+	<li class="cat-item cat-item-26"><a href="https://it-eb.com/category/computational-biology/" >Computational Biology</a>
+</li>
+	<li class="cat-item cat-item-31"><a href="https://it-eb.com/category/computer-science/" >Computer Science</a>
+</li>
+	<li class="cat-item cat-item-38"><a href="https://it-eb.com/category/computing/" >Computing</a>
+</li>
+	<li class="cat-item cat-item-46"><a href="https://it-eb.com/category/data-management/" >Data Management</a>
+</li>
+	<li class="cat-item cat-item-14"><a href="https://it-eb.com/category/data-mining/" >Data Mining</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://it-eb.com/category/databases/" >Databases</a>
+</li>
+	<li class="cat-item cat-item-45"><a href="https://it-eb.com/category/debugging-and-troubleshooting/" >Debugging and Troubleshooting</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="https://it-eb.com/category/designing/" >Designing</a>
+</li>
+	<li class="cat-item cat-item-41"><a href="https://it-eb.com/category/digital-design-media/" >Digital Design/Media</a>
+</li>
+	<li class="cat-item cat-item-37"><a href="https://it-eb.com/category/engineering/" >Engineering</a>
+</li>
+	<li class="cat-item cat-item-12"><a href="https://it-eb.com/category/game-development/" >Game Development</a>
+</li>
+	<li class="cat-item cat-item-33"><a href="https://it-eb.com/category/hacking/" >Hacking</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="https://it-eb.com/category/hardware/" >Hardware</a>
+</li>
+	<li class="cat-item cat-item-29"><a href="https://it-eb.com/category/image-processing/" >Image Processing</a>
+</li>
+	<li class="cat-item cat-item-47"><a href="https://it-eb.com/category/internet-of-things/" >Internet of Things</a>
+</li>
+	<li class="cat-item cat-item-15"><a href="https://it-eb.com/category/iot/" >IoT</a>
+</li>
+	<li class="cat-item cat-item-22"><a href="https://it-eb.com/category/linux/" >Linux</a>
+</li>
+	<li class="cat-item cat-item-32"><a href="https://it-eb.com/category/machine-learning/" >Machine Learning</a>
+</li>
+	<li class="cat-item cat-item-27"><a href="https://it-eb.com/category/management/" >Management</a>
+</li>
+	<li class="cat-item cat-item-34"><a href="https://it-eb.com/category/manual/" >Manual</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="https://it-eb.com/category/mobile-development/" >Mobile Development</a>
+</li>
+	<li class="cat-item cat-item-28"><a href="https://it-eb.com/category/netonets/" >NetoNets</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://it-eb.com/category/networking/" >Networking</a>
+</li>
+	<li class="cat-item cat-item-24"><a href="https://it-eb.com/category/operating-systems/" >Operating Systems</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="https://it-eb.com/category/programming/" >Programming</a>
+</li>
+	<li class="cat-item cat-item-18"><a href="https://it-eb.com/category/robotics/" >Robotics</a>
+</li>
+	<li class="cat-item cat-item-36"><a href="https://it-eb.com/category/sap/" >SAP</a>
+</li>
+	<li class="cat-item cat-item-43"><a href="https://it-eb.com/category/scripting/" >Scripting</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="https://it-eb.com/category/security/" >Security</a>
+</li>
+	<li class="cat-item cat-item-40"><a href="https://it-eb.com/category/seo/" >SEO</a>
+</li>
+	<li class="cat-item cat-item-30"><a href="https://it-eb.com/category/signal-processing/" >Signal Processing</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="https://it-eb.com/category/software/" >Software</a>
+</li>
+	<li class="cat-item cat-item-17"><a href="https://it-eb.com/category/software-development/" >Software Development</a>
+</li>
+	<li class="cat-item cat-item-25"><a href="https://it-eb.com/category/software-quality/" >Software Quality</a>
+</li>
+	<li class="cat-item cat-item-44"><a href="https://it-eb.com/category/sysadmin/" >Sysadmin</a>
+</li>
+	<li class="cat-item cat-item-13"><a href="https://it-eb.com/category/telecommunications/" >Telecommunications</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="https://it-eb.com/category/testing/" >Testing</a>
+</li>
+	<li class="cat-item cat-item-39"><a href="https://it-eb.com/category/tips-and-tricks/" >Tips and Tricks</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://it-eb.com/category/uncategorized/" >Uncategorized</a>
+</li>
+	<li class="cat-item cat-item-42"><a href="https://it-eb.com/category/version-control/" >Version Control</a>
+</li>
+	<li class="cat-item cat-item-2"><a href="https://it-eb.com/category/web-development/" >Web Development</a>
+</li>
+		</ul>
+</section>
+			</div>
+
+		</div>
+
+	</aside><!--/.sidebar-->
+
+
+				</div><!--/.container-->
+
+			</div><!--/.container-outer-->
+
+		</article>
+
+	</main>
+
+
+
+<footer id="footer" class="footer">
+	<div class="container">
+
+		<div class="copyright">
+
+			<p>
+				&copy;2018 <a href="https://it-eb.com">Technology and Engineering eBooks</a>			</p>
+
+							<p>
+					Powered by Wordpress. Theme: Coldbox.				</p>
+			
+		</div>
+
+		
+	</div><!--/.container-->
+
+	<a id="back-to-top" class="noscroll" href="#"><span class="chevron-up"></span></a>
+
+</footer>
+
+<div class="modal-search-form">
+<form method="get" class="search-form" action="https://it-eb.com/">
+	<input type="search" class="search-inner" name="s" placeholder="Title, ISBN, Author, Publisher, or whatever you come up with..." />
+	<button type="submit" class="search-submit"><i class="icon search"></i></button>
+</form>
+<div class="close-toggle"><span class="top"></span><span class="bottom"></span><span class="label">Close</span></div></div>
+
+
+<script type='text/javascript'>
+var renderInvisibleReCaptcha = function() {
+
+    for (var i = 0; i < document.forms.length; ++i) {
+        var form = document.forms[i];
+        var holder = form.querySelector('.inv-recaptcha-holder');
+
+        if (null === holder) continue;
+		holder.innerHTML = '';
+
+        (function(frm){
+			var cf7SubmitElm = frm.querySelector('.wpcf7-submit');
+            var holderId = grecaptcha.render(holder,{
+                'sitekey': '6LchVTgUAAAAAORGBFITAKda3kZT7sv3xgtP9n6n', 'size': 'invisible', 'badge' : 'bottomleft',
+                'callback' : function (recaptchaToken) {
+					((null !== cf7SubmitElm) && (typeof jQuery != 'undefined')) ? jQuery(frm).submit() : HTMLFormElement.prototype.submit.call(frm);
+                },
+                'expired-callback' : function(){grecaptcha.reset(holderId);}
+            });
+
+            frm.onsubmit = function (evt){evt.preventDefault();grecaptcha.execute(holderId);};
+
+			if(null !== cf7SubmitElm && (typeof jQuery != 'undefined') ){
+				jQuery(cf7SubmitElm).one('click', function(clickEvt){
+					clickEvt.preventDefault();
+					grecaptcha.execute(holderId);
+				});
+			}
+
+        })(form);
+    }
+};
+</script>
+<script type='text/javascript' async defer src='https://www.google.com/recaptcha/api.js?onload=renderInvisibleReCaptcha&#038;render=explicit&#038;hl=en'></script>
+<script type='text/javascript'>
+post_id = 1636;
+</script>
+<script type='text/javascript' src='http://it-eb.com/wp-content/themes/iteb/custom.js?ver=1.1'></script>
+<script type='text/javascript' src='http://it-eb.com/wp-includes/js/comment-reply.min.js?ver=4.8.2'></script>
+<script type='text/javascript' src='http://it-eb.com/wp-content/themes/coldbox/assets/js/cd-scripts.min.js?ver=1.2.7'></script>
+<script type='text/javascript'>
+jQuery(function($) { $('.entry img').parent('a').css({'box-shadow':'none'}); });
+</script>
+<script type='text/javascript' src='http://it-eb.com/wp-includes/js/imagesloaded.min.js?ver=3.2.0'></script>
+<script type='text/javascript' src='http://it-eb.com/wp-includes/js/masonry.min.js?ver=3.3.2'></script>
+<script type='text/javascript'>
+jQuery(window).on("load resize",function(){window.matchMedia("(max-width: 980px) and (min-width: 641px)").matches||jQuery("body").hasClass("bottom-sidebar-s1")?jQuery("#sidebar-s1 .sidebar-inner").imagesLoaded(function(){jQuery("#sidebar-s1 .sidebar-inner").masonry({itemSelector:".widget",percentPosition:!0,isAnimated:!0}),jQuery(".widget").css({position:"absolute"})}):jQuery(".widget").css({position:"",top:"",left:""})});
+</script>
+<script type='text/javascript' src='http://it-eb.com/wp-includes/js/wp-embed.min.js?ver=4.8.2'></script>
+</body></html>
+

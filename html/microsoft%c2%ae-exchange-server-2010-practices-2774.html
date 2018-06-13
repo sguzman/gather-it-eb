@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta name="msvalidate.01" content="095D4FA2E4824BED6B22102FB8CE263E" />
+	<meta name="yandex-verification" content="e9a4e56df6df93bd" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109518968-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-109518968-1');
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta content="#494949" name="theme-color">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<title>Microsoft® Exchange Server 2010 Best Practices (IT Best Practices &#8211; Microsoft Press) &#8211; Technology and Engineering eBooks</title>
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel='dns-prefetch' href='//it-eb.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Technology and Engineering eBooks &raquo; Feed" href="https://it-eb.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Technology and Engineering eBooks &raquo; Comments Feed" href="https://it-eb.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Technology and Engineering eBooks &raquo; Microsoft® Exchange Server 2010 Best Practices (IT Best Practices &#8211; Microsoft Press) Comments Feed" href="https://it-eb.com/microsoft%c2%ae-exchange-server-2010-practices-2774/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/it-eb.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.2"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='cd-style-css'  href='http://it-eb.com/wp-content/themes/coldbox/style.css?ver=4.8.2' type='text/css' media='all' />
+<style id='cd-style-inline-css' type='text/css'>
+.prev .post-thumbnail{background-image:url("https://it-eb.com/covers/71/71c0d3b5f68a1dc4821f4aeb3b09bb63.jpg")}
+.next .post-thumbnail{background-image:url("https://it-eb.com/covers/68/68cbef52369a72114a7e13b78fd5dd21.jpg")}
+body { font-family: Source Sans Pro, Arial, sans-serif; }
+.entry a, .title-box a:hover, .post-meta a:hover, .post-meta.content-box a:hover, .post-btm-tags a:hover, p.post-btm-cats a:hover, .related-posts .post-category a, .related-posts .post:hover .post-title, .post-pages, .grid-view .post-inner a:hover .post-title, .standard-view .post-title:hover, ul.page-numbers, .widget #wp-calendar a, .widget .widgets-list-layout li:hover a, #comment-list .comment-author .fn a, #respond .logged-in-as a:hover, .comment-pages, .comment-pages a,.comment-pages span, .comment-body a, .comment-tabmenu .active > a, .standard-view .post-inner:hover .post-title, .widget .textwidget a { color: #494949; }
+			#comments input[type=submit], .post-tags a, .post-tags a, .main-archive .post-date, .action-bar, input[type=submit]:hover, input[type=submit]:focus, input[type=button]:hover, input[type=button]:focus, button[type=submit]:hover, button[type=submit]:focus, button[type=button]:hover, button[type=button]:focus { background-color: #494949; }
+			textarea:focus { border-color: #494949; }
+			.comment-pages > a:hover, .comment-pages span, .post-pages > a:hover>span,.post-pages>span, ul.page-numbers span.page-numbers.current, ul.page-numbers a.page-numbers:hover { border-bottom-color: #494949; }
+			::selection { background-color: #494949; }
+			::moz-selection { background-color: #494949; }
+.site-info,.site-title{color:#;}.site-description{color:rgb(10, 10, 10);}
+			#header-menu .menu-container > li > a{color:#}#header-menu .menu-container > li:hover > a{color:rgb(0, 0, -20)}
+			:root body .search-toggle span.icon.search{border-color:#}:root body .search-toggle span.icon.search::before,.nav-toggle .bottom, .nav-toggle .middle, .nav-toggle .top{background-color:#}
+</style>
+<link rel='stylesheet' id='child-style-css'  href='http://it-eb.com/wp-content/themes/iteb/style.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='FontAwesome-css'  href='http://it-eb.com/wp-content/themes/coldbox/fonts/fontawesome/css/font-awesome.min.css?ver=4.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='GoogleFonts-css'  href='//fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700&#038;ver=4.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='SourceSansPro-css'  href='//fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400%2C400i%2C600%2C600i%2C700&#038;ver=4.8.2' type='text/css' media='all' />
+<script type='text/javascript' src='http://it-eb.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://it-eb.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://it-eb.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://it-eb.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://it-eb.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Microsoft Exchange 2010 PowerShell Cookbook' href='https://it-eb.com/microsoft-exchange-2010-powershell-cookbook-2773/' />
+<link rel='next' title='Microsoft Exchange Server 2010 Inside Out' href='https://it-eb.com/microsoft-exchange-server-2010-inside-2775/' />
+<meta name="generator" content="WordPress 4.8.2" />
+<link rel="canonical" href="https://it-eb.com/microsoft%c2%ae-exchange-server-2010-practices-2774/" />
+<link rel='shortlink' href='https://it-eb.com/?p=3136' />
+<link rel="alternate" type="application/json+oembed" href="https://it-eb.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fit-eb.com%2Fmicrosoft%25c2%25ae-exchange-server-2010-practices-2774%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://it-eb.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fit-eb.com%2Fmicrosoft%25c2%25ae-exchange-server-2010-practices-2774%2F&#038;format=xml" />
+<!-- FAVHERO FAVICON START --><!-- For iPad with high-resolution Retina display running iOS ≥ 7: --><link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://it-eb.com/wp-content/uploads/2017/11/favicon-152.png"><!-- Standard: --><link rel="icon" sizes="152x152" href="https://it-eb.com/wp-content/uploads/2017/11/favicon-152.png"><meta name="msapplication-TileColor" content="#FFFFFF"><meta name="msapplication-TileImage" content="https://it-eb.com/wp-content/uploads/2017/11/favicon-144.png"><!-- For iPad with high-resolution Retina display running iOS ≤ 6: --><link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://it-eb.com/wp-content/uploads/2017/11/favicon-144.png"><!-- For iPhone with high-resolution Retina display running iOS ≥ 7: --><link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://it-eb.com/wp-content/uploads/2017/11/favicon-120.png"><!-- For first- and second-generation iPad: --><link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://it-eb.com/wp-content/uploads/2017/11/favicon-72.png"><!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: --><link rel="apple-touch-icon-precomposed" href="https://it-eb.com/wp-content/uploads/2017/11/favicon-57.png"><!-- FAVHERO FAVICON END --><link rel="pingback" href="http://it-eb.com/xmlrpc.php">
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		</head>
+
+<body class="post-template-default single single-post postid-3136 single-format-standard wp-custom-logo header-menu-enabled sticky-header left-sidebar-s1 header-column">
+
+
+	<header id="header" class="header">
+
+		<div class="header-inner container">
+
+			<div class="site-info">
+				<h1 class="site-title">
+					<a href="https://it-eb.com" title="Technology and Engineering eBooks"><img src="https://it-eb.com/wp-content/uploads/2017/11/logo.png" alt="Technology and Engineering eBooks" /></a>				</h1>
+									<p class="site-description"></p>
+							</div>
+
+			<div class="search-toggle"><span class="icon search"></span></div>
+							<button class="nav-toggle header-menu" on="tap:amp-sidebar.open"><span class="top"></span><span class="middle"></span><span class="bottom"></span></button>
+						
+			<nav id="header-menu"><ul id="header-nav" class="menu-container"><li id="menu-item-11730" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11730"><a href="https://it-eb.com/category/big-data/">Big Data</a></li>
+<li id="menu-item-11732" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11732"><a href="https://it-eb.com/category/databases/">Databases</a></li>
+<li id="menu-item-11735" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11735"><a href="https://it-eb.com/category/hardware/">Hardware</a></li>
+<li id="menu-item-11737" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11737"><a href="https://it-eb.com/category/mobile-development/">Mobile Development</a></li>
+<li id="menu-item-11738" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11738"><a href="https://it-eb.com/category/networking/">Networking</a></li>
+<li id="menu-item-11741" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11741"><a href="https://it-eb.com/category/security/">Security</a></li>
+<li id="menu-item-11742" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-11742"><a href="https://it-eb.com/category/software/">Software</a></li>
+<li id="menu-item-11747" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11747"><a href="https://it-eb.com/category/web-development/">Web Development</a></li>
+<li id="menu-item-11947" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-11947"><a href="#">Others</a>
+<ul class="sub-menu">
+	<li id="menu-item-11948" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11948"><a href="https://it-eb.com/category/algorithms/">Algorithms</a></li>
+	<li id="menu-item-11949" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11949"><a href="https://it-eb.com/category/cloud-computing/">Cloud Computing</a></li>
+	<li id="menu-item-11950" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11950"><a href="https://it-eb.com/category/computational-biology/">Computational Biology</a></li>
+	<li id="menu-item-11951" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11951"><a href="https://it-eb.com/category/computer-science/">Computer Science</a></li>
+	<li id="menu-item-11952" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11952"><a href="https://it-eb.com/category/computing/">Computing</a></li>
+	<li id="menu-item-11953" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11953"><a href="https://it-eb.com/category/data-management/">Data Management</a></li>
+	<li id="menu-item-11954" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11954"><a href="https://it-eb.com/category/data-mining/">Data Mining</a></li>
+	<li id="menu-item-11955" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11955"><a href="https://it-eb.com/category/debugging-and-troubleshooting/">Debugging and Troubleshooting</a></li>
+	<li id="menu-item-11956" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11956"><a href="https://it-eb.com/category/designing/">Designing</a></li>
+	<li id="menu-item-11957" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11957"><a href="https://it-eb.com/category/digital-design-media/">Digital Design/Media</a></li>
+	<li id="menu-item-11958" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11958"><a href="https://it-eb.com/category/engineering/">Engineering</a></li>
+	<li id="menu-item-11959" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11959"><a href="https://it-eb.com/category/hacking/">Hacking</a></li>
+	<li id="menu-item-11960" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11960"><a href="https://it-eb.com/category/image-processing/">Image Processing</a></li>
+	<li id="menu-item-11961" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11961"><a href="https://it-eb.com/category/internet-of-things/">Internet of Things</a></li>
+	<li id="menu-item-11962" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11962"><a href="https://it-eb.com/category/linux/">Linux</a></li>
+	<li id="menu-item-11963" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11963"><a href="https://it-eb.com/category/machine-learning/">Machine Learning</a></li>
+	<li id="menu-item-11964" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11964"><a href="https://it-eb.com/category/management/">Management</a></li>
+	<li id="menu-item-11965" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11965"><a href="https://it-eb.com/category/manual/">Manual</a></li>
+	<li id="menu-item-11966" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11966"><a href="https://it-eb.com/category/networking/">Networking</a></li>
+	<li id="menu-item-11967" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11967"><a href="https://it-eb.com/category/operating-systems/">Operating Systems</a></li>
+	<li id="menu-item-11968" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11968"><a href="https://it-eb.com/category/programming/">Programming</a></li>
+	<li id="menu-item-11969" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11969"><a href="https://it-eb.com/category/resource-management/">Resource Management</a></li>
+	<li id="menu-item-11970" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11970"><a href="https://it-eb.com/category/robotics/">Robotics</a></li>
+	<li id="menu-item-11971" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11971"><a href="https://it-eb.com/category/scripting/">Scripting</a></li>
+	<li id="menu-item-11972" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11972"><a href="https://it-eb.com/category/security/">Security</a></li>
+	<li id="menu-item-11973" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11973"><a href="https://it-eb.com/category/seo/">SEO</a></li>
+	<li id="menu-item-11974" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11974"><a href="https://it-eb.com/category/signal-processing/">Signal Processing</a></li>
+	<li id="menu-item-11975" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11975"><a href="https://it-eb.com/category/software-quality/">Software Quality</a></li>
+	<li id="menu-item-11976" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-11976"><a href="https://it-eb.com/category/sysadmin/">Sysadmin</a></li>
+	<li id="menu-item-11977" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11977"><a href="https://it-eb.com/category/telecommunications/">Telecommunications</a></li>
+	<li id="menu-item-11978" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11978"><a href="https://it-eb.com/category/testing/">Testing</a></li>
+	<li id="menu-item-11979" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11979"><a href="https://it-eb.com/category/tips-and-tricks/">Tips and Tricks</a></li>
+	<li id="menu-item-11981" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11981"><a href="https://it-eb.com/category/version-control/">Version Control</a></li>
+	<li id="menu-item-11980" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11980"><a href="https://it-eb.com/category/uncategorized/">Uncategorized</a></li>
+</ul>
+</li>
+</ul><!--/#header-nav--></nav>
+		</div>
+
+</header>
+
+
+	<main id="main" class="main-single">
+
+		<article id="post-3136" class="main-inner post-3136 post type-post status-publish format-standard hentry category-software category-sysadmin">
+
+				<header class="title-box">
+		<div class="title-box-inner container">
+			<div class="breadcrumb"><a href="https://it-eb.com">Home</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;<a href="https://it-eb.com/category/software/" rel="category tag">Software</a> &#47; <a href="https://it-eb.com/category/sysadmin/" rel="category tag">Sysadmin</a></div>
+			<h1 class="post-title">Microsoft® Exchange Server 2010 Best Practices (IT Best Practices &#8211; Microsoft Press)</h1>
+		</div>
+	</header>
+	
+			<div class="container-outer">
+
+				<div class="container">
+
+					<div class="content">
+
+						<div class="content-inner">
+
+							<div class="content-inside">
+
+								<footer class="post-meta content-box">
+									
+									
+																			<time class="post-date" datetime="">October 21, 2017</time>
+									
+									
+									
+																	</footer>
+
+
+								<div class="entry content-box">
+																		<div class="book-cover"><img src="https://it-eb.com/covers/e1/e1d73aca3c9b62402826d95aae1744f5.jpg"></div>
+									<div class="entry-inner"><div> <meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><meta content="Word.Document" name="ProgId"></meta><meta content="Microsoft Word 12" name="Generator"></meta><meta content="Microsoft Word 12" name="Originator"></meta><link href="file:///C:UsersgruttyAppDataLocalTempmsohtmlclip1 1clip_filelist.xml" rel="File-List"></link><link href="file:///C:UsersgruttyAppDataLocalTempmsohtmlclip1 1clip_themedata.thmx" rel="themeData"></link><link href="file:///C:UsersgruttyAppDataLocalTempmsohtmlclip1 1clip_colorschememapping.xml" rel="colorSchemeMapping"></link>
+<style> &amp;lt;!-- /* Font Definitions */ @font-face {font-family:"Cambria Math"; panose-1:2 4 5 3 5 4 6 3 2 4; mso-font-alt:"Calisto MT"; mso-font-charset:0; mso-generic-font-family:roman; mso-font-pitch:variable; mso-font-signature:-1610611985 1107304683 0 0 159 0;} @font-face {font-family:Calibri; panose-1:2 15 5 2 2 2 4 3 2 4; mso-font-alt:"Times New Roman"; mso-font-charset:0; mso-generic-font-family:swiss; mso-font-pitch:variable; mso-font-signature:-1610611985 1073750139 0 0 159 0;} /* Style Definitions */ p.MsoNormal, li.MsoNormal, div.MsoNormal {mso-style-unhide:no; mso-style-qformat:yes; mso-style-parent:""; margin:0in; margin-bottom:.0001pt; mso-pagination:widow-orphan; font-size:11.0pt; font-family:"Calibri","sans-serif"; mso-ascii-font-family:Calibri; mso-ascii-theme-font:minor-latin; mso-fareast-font-family:Calibri; mso-fareast-theme-font:minor-latin; mso-hansi-font-family:Calibri; mso-hansi-theme-font:minor-latin; mso-bidi-font-family:"Times New Roman"; mso-bidi-theme-font:minor-bidi;} .MsoChpDefault {mso-style-type:export-only; mso-default-props:yes; mso-ascii-font-family:Calibri; mso-ascii-theme-font:minor-latin; mso-fareast-font-family:Calibri; mso-fareast-theme-font:minor-latin; mso-hansi-font-family:Calibri; mso-hansi-theme-font:minor-latin; mso-bidi-font-family:"Times New Roman"; mso-bidi-theme-font:minor-bidi;} @page WordSection1 {size:8.5in 11.0in; margin:1.0in 1.0in 1.0in 1.0in; mso-header-margin:.5in; mso-footer-margin:.5in; mso-paper-source:0;} div.WordSection1 {page:WordSection1;} --&amp;gt; </style>
+<p><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">Covers Service Pack 1!</span><br /></br><br /></br>Apply best practices for administering Exchange Server 2010 and SP1&#8211;and optimize your operational efficiency and results. This guide captures the field-tested solutions, real-world lessons, and candid advice of practitioners across the range of business and technical scenarios&#8211;and across the IT life cycle. Gain expert insights on what works, where to make tradeoffs, and how to implement the best decisions for your organization. </p>
+<p>Discover how to:<br /></br></p>
+<div style="text-align: left;">
+<ul>
+<li>Apply scenario-based guidance for planning and deployment</li>
+<li>Prepare Active Directory(R) and the server environment</li>
+<li>Validate requirements and understand configuration tradeoffs</li>
+<li>Learn best ways to manage users, mailboxes, and permissions</li>
+<li>Optimize message routing and security</li>
+<li>Design and implement Unified Messaging and federated delegation</li>
+<li>Define your archiving and compliance strategy</li>
+<li>Build high availability into your backup and recovery plan</li>
+<li>Monitor and tune performance</li>
+<li>Apply proven troubleshooting tactics</li>
+</ul>
+<p>Companion Web content features:<br /></br></p>
+<ul>
+<li>Checklists, planning worksheets, and other job aids</li>
+<li>Quick Reference Guide to best practices, including recommended </li>
+<li>Fast-reference card for using Windows PowerShell(TM) Entered e-mail <br /></br></li>
+</ul>
+<p></br></div>
+<p> 	<em></em></p>
+<div id="outer_postBodyPS" style="overflow: hidden; z-index: 1; height: 0px; display: block;">
+<div id="postBodyPS" style="overflow: hidden;">
+<div class="bookDescriptionTextbookWidth" id="bookDesc_iframe_wrapper"></div>
+</p></div>
+</p></div>
+<div id="psPlaceHolder" style="height: 20px; display: none;">
+<div style="z-index: 3;">
+<p>   		<a class="a-link-expander h2-expander"><br />
+	   		<i class="a-icon a-icon-expand" id="bdExpanderIcon"></i><br />
+	   		<span id="bdSeeAllPrompt">Read more</span><br />
+	   		<span id="bdSeeLessPrompt" style="display: none;">Read less</span><br />
+   		</a>
+  	</div>
+</p></div>
+<p><script type="text/javascript"></p>
+<p>P.when('DynamicIframe').execute(function(DynamicIframe){
+	var BookDescriptionIframe = null,
+	    bookDescEncodedData = "%3Cmeta%20content%3D%22text%2Fhtml%3B%20charset%3Dutf-8%22%20http-equiv%3D%22Content-Type%22%20%2F%3E%20%3Cmeta%20content%3D%22Word.Document%22%20name%3D%22ProgId%22%20%2F%3E%20%3Cmeta%20content%3D%22Microsoft%20Word%2012%22%20name%3D%22Generator%22%20%2F%3E%20%3Cmeta%20content%3D%22Microsoft%20Word%2012%22%20name%3D%22Originator%22%20%2F%3E%20%3Clink%20href%3D%22file%3A%2F%2F%2FC%3A%5CUsers%5Cgrutty%5CAppData%5CLocal%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_filelist.xml%22%20rel%3D%22File-List%22%20%2F%3E%20%3Clink%20href%3D%22file%3A%2F%2F%2FC%3A%5CUsers%5Cgrutty%5CAppData%5CLocal%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_themedata.thmx%22%20rel%3D%22themeData%22%20%2F%3E%20%3Clink%20href%3D%22file%3A%2F%2F%2FC%3A%5CUsers%5Cgrutty%5CAppData%5CLocal%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_colorschememapping.xml%22%20rel%3D%22colorSchemeMapping%22%20%2F%3E%20%3C%21--%5Bif%20gte%20mso%209%5D%3E%3Cxml%3E%20%3Cw%3AWordDocument%3E%20%3Cw%3AView%3ENormal%3C%2Fw%3AView%3E%20%3Cw%3AZoom%3E0%3C%2Fw%3AZoom%3E%20%3Cw%3ATrackMoves%20%2F%3E%20%3Cw%3ATrackFormatting%20%2F%3E%20%3Cw%3APunctuationKerning%20%2F%3E%20%3Cw%3AValidateAgainstSchemas%20%2F%3E%20%3Cw%3ASaveIfXMLInvalid%3Efalse%3C%2Fw%3ASaveIfXMLInvalid%3E%20%3Cw%3AIgnoreMixedContent%3Efalse%3C%2Fw%3AIgnoreMixedContent%3E%20%3Cw%3AAlwaysShowPlaceholderText%3Efalse%3C%2Fw%3AAlwaysShowPlaceholderText%3E%20%3Cw%3ADoNotPromoteQF%20%2F%3E%20%3Cw%3ALidThemeOther%3EEN-US%3C%2Fw%3ALidThemeOther%3E%20%3Cw%3ALidThemeAsian%3EX-NONE%3C%2Fw%3ALidThemeAsian%3E%20%3Cw%3ALidThemeComplexScript%3EX-NONE%3C%2Fw%3ALidThemeComplexScript%3E%20%3Cw%3ACompatibility%3E%20%3Cw%3ABreakWrappedTables%20%2F%3E%20%3Cw%3ASnapToGridInCell%20%2F%3E%20%3Cw%3AWrapTextWithPunct%20%2F%3E%20%3Cw%3AUseAsianBreakRules%20%2F%3E%20%3Cw%3ADontGrowAutofit%20%2F%3E%20%3Cw%3ASplitPgBreakAndParaMark%20%2F%3E%20%3Cw%3ADontVertAlignCellWithSp%20%2F%3E%20%3Cw%3ADontBreakConstrainedForcedTables%20%2F%3E%20%3Cw%3ADontVertAlignInTxbx%20%2F%3E%20%3Cw%3AWord11KerningPairs%20%2F%3E%20%3Cw%3ACachedColBalance%20%2F%3E%20%3C%2Fw%3ACompatibility%3E%20%3Cw%3ADoNotOptimizeForBrowser%20%2F%3E%20%3Cm%3AmathPr%3E%20%3Cm%3AmathFont%20m%3Aval%3D%22Cambria%20Math%22%20%2F%3E%20%3Cm%3AbrkBin%20m%3Aval%3D%22before%22%20%2F%3E%20%3Cm%3AbrkBinSub%20m%3Aval%3D%22%26%2345%3B-%22%20%2F%3E%20%3Cm%3AsmallFrac%20m%3Aval%3D%22off%22%20%2F%3E%20%3Cm%3AdispDef%20%2F%3E%20%3Cm%3AlMargin%20m%3Aval%3D%220%22%20%2F%3E%20%3Cm%3ArMargin%20m%3Aval%3D%220%22%20%2F%3E%20%3Cm%3AdefJc%20m%3Aval%3D%22centerGroup%22%20%2F%3E%20%3Cm%3AwrapIndent%20m%3Aval%3D%221440%22%20%2F%3E%20%3Cm%3AintLim%20m%3Aval%3D%22subSup%22%20%2F%3E%20%3Cm%3AnaryLim%20m%3Aval%3D%22undOvr%22%20%2F%3E%20%3C%2Fm%3AmathPr%3E%3C%2Fw%3AWordDocument%3E%20%3C%2Fxml%3E%3C%21%5Bendif%5D--%3E%3C%21--%5Bif%20gte%20mso%209%5D%3E%3Cxml%3E%20%3Cw%3ALatentStyles%20DefLockedState%3D%22false%22%20DefUnhideWhenUsed%3D%22true%22%20DefSemiHidden%3D%22true%22%20DefQFormat%3D%22false%22%20DefPriority%3D%2299%22%20LatentStyleCount%3D%22267%22%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%220%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20QFormat%3D%22true%22%20Name%3D%22Normal%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%229%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20QFormat%3D%22true%22%20Name%3D%22heading%201%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%229%22%20QFormat%3D%22true%22%20Name%3D%22heading%202%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%229%22%20QFormat%3D%22true%22%20Name%3D%22heading%203%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%229%22%20QFormat%3D%22true%22%20Name%3D%22heading%204%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%229%22%20QFormat%3D%22true%22%20Name%3D%22heading%205%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%229%22%20QFormat%3D%22true%22%20Name%3D%22heading%206%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%229%22%20QFormat%3D%22true%22%20Name%3D%22heading%207%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%229%22%20QFormat%3D%22true%22%20Name%3D%22heading%208%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%229%22%20QFormat%3D%22true%22%20Name%3D%22heading%209%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2239%22%20Name%3D%22toc%201%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2239%22%20Name%3D%22toc%202%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2239%22%20Name%3D%22toc%203%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2239%22%20Name%3D%22toc%204%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2239%22%20Name%3D%22toc%205%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2239%22%20Name%3D%22toc%206%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2239%22%20Name%3D%22toc%207%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2239%22%20Name%3D%22toc%208%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2239%22%20Name%3D%22toc%209%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2235%22%20QFormat%3D%22true%22%20Name%3D%22caption%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2210%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20QFormat%3D%22true%22%20Name%3D%22Title%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%221%22%20Name%3D%22Default%20Paragraph%20Font%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2211%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20QFormat%3D%22true%22%20Name%3D%22Subtitle%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2222%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20QFormat%3D%22true%22%20Name%3D%22Strong%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2220%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20QFormat%3D%22true%22%20Name%3D%22Emphasis%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2259%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Table%20Grid%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Placeholder%20Text%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%221%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20QFormat%3D%22true%22%20Name%3D%22No%20Spacing%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2260%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Light%20Shading%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2261%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Light%20List%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2262%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Light%20Grid%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2263%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Shading%201%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2264%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Shading%202%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2265%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20List%201%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2266%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20List%202%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2267%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Grid%201%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2268%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Grid%202%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2269%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Grid%203%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2270%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Dark%20List%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2271%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Colorful%20Shading%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2272%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Colorful%20List%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2273%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Colorful%20Grid%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2260%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Light%20Shading%20Accent%201%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2261%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Light%20List%20Accent%201%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2262%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Light%20Grid%20Accent%201%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2263%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Shading%201%20Accent%201%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2264%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Shading%202%20Accent%201%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2265%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20List%201%20Accent%201%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Revision%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2234%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20QFormat%3D%22true%22%20Name%3D%22List%20Paragraph%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2229%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20QFormat%3D%22true%22%20Name%3D%22Quote%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2230%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20QFormat%3D%22true%22%20Name%3D%22Intense%20Quote%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2266%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20List%202%20Accent%201%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2267%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Grid%201%20Accent%201%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2268%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Grid%202%20Accent%201%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2269%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Grid%203%20Accent%201%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2270%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Dark%20List%20Accent%201%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2271%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Colorful%20Shading%20Accent%201%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2272%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Colorful%20List%20Accent%201%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2273%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Colorful%20Grid%20Accent%201%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2260%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Light%20Shading%20Accent%202%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2261%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Light%20List%20Accent%202%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2262%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Light%20Grid%20Accent%202%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2263%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Shading%201%20Accent%202%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2264%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Shading%202%20Accent%202%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2265%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20List%201%20Accent%202%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2266%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20List%202%20Accent%202%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2267%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Grid%201%20Accent%202%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2268%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Grid%202%20Accent%202%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2269%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Grid%203%20Accent%202%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2270%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Dark%20List%20Accent%202%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2271%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Colorful%20Shading%20Accent%202%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2272%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Colorful%20List%20Accent%202%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2273%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Colorful%20Grid%20Accent%202%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2260%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Light%20Shading%20Accent%203%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2261%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Light%20List%20Accent%203%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2262%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Light%20Grid%20Accent%203%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2263%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Shading%201%20Accent%203%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2264%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Shading%202%20Accent%203%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2265%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20List%201%20Accent%203%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2266%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20List%202%20Accent%203%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2267%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Grid%201%20Accent%203%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2268%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Grid%202%20Accent%203%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2269%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Grid%203%20Accent%203%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2270%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Dark%20List%20Accent%203%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2271%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Colorful%20Shading%20Accent%203%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2272%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Colorful%20List%20Accent%203%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2273%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Colorful%20Grid%20Accent%203%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2260%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Light%20Shading%20Accent%204%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2261%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Light%20List%20Accent%204%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2262%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Light%20Grid%20Accent%204%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2263%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Shading%201%20Accent%204%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2264%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Shading%202%20Accent%204%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2265%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20List%201%20Accent%204%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2266%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20List%202%20Accent%204%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2267%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Grid%201%20Accent%204%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2268%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Grid%202%20Accent%204%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2269%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Grid%203%20Accent%204%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2270%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Dark%20List%20Accent%204%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2271%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Colorful%20Shading%20Accent%204%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2272%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Colorful%20List%20Accent%204%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2273%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Colorful%20Grid%20Accent%204%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2260%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Light%20Shading%20Accent%205%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2261%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Light%20List%20Accent%205%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2262%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Light%20Grid%20Accent%205%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2263%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Shading%201%20Accent%205%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2264%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Shading%202%20Accent%205%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2265%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20List%201%20Accent%205%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2266%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20List%202%20Accent%205%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2267%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Grid%201%20Accent%205%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2268%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Grid%202%20Accent%205%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2269%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Grid%203%20Accent%205%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2270%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Dark%20List%20Accent%205%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2271%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Colorful%20Shading%20Accent%205%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2272%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Colorful%20List%20Accent%205%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2273%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Colorful%20Grid%20Accent%205%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2260%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Light%20Shading%20Accent%206%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2261%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Light%20List%20Accent%206%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2262%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Light%20Grid%20Accent%206%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2263%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Shading%201%20Accent%206%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2264%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Shading%202%20Accent%206%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2265%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20List%201%20Accent%206%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2266%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20List%202%20Accent%206%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2267%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Grid%201%20Accent%206%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2268%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Grid%202%20Accent%206%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2269%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Medium%20Grid%203%20Accent%206%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2270%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Dark%20List%20Accent%206%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2271%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Colorful%20Shading%20Accent%206%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2272%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Colorful%20List%20Accent%206%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2273%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20Name%3D%22Colorful%20Grid%20Accent%206%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2219%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20QFormat%3D%22true%22%20Name%3D%22Subtle%20Emphasis%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2221%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20QFormat%3D%22true%22%20Name%3D%22Intense%20Emphasis%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2231%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20QFormat%3D%22true%22%20Name%3D%22Subtle%20Reference%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2232%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20QFormat%3D%22true%22%20Name%3D%22Intense%20Reference%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2233%22%20SemiHidden%3D%22false%22%20UnhideWhenUsed%3D%22false%22%20QFormat%3D%22true%22%20Name%3D%22Book%20Title%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2237%22%20Name%3D%22Bibliography%22%20%2F%3E%20%3Cw%3ALsdException%20Locked%3D%22false%22%20Priority%3D%2239%22%20QFormat%3D%22true%22%20Name%3D%22TOC%20Heading%22%20%2F%3E%20%3C%2Fw%3ALatentStyles%3E%20%3C%2Fxml%3E%3C%21%5Bendif%5D--%3E%20%3Cstyle%3E%20%26lt%3B%21--%20%2F*%20Font%20Definitions%20*%2F%20%40font-face%20%7Bfont-family%3A%22Cambria%20Math%22%3B%20panose-1%3A2%204%205%203%205%204%206%203%202%204%3B%20mso-font-alt%3A%22Calisto%20MT%22%3B%20mso-font-charset%3A0%3B%20mso-generic-font-family%3Aroman%3B%20mso-font-pitch%3Avariable%3B%20mso-font-signature%3A-1610611985%201107304683%200%200%20159%200%3B%7D%20%40font-face%20%7Bfont-family%3ACalibri%3B%20panose-1%3A2%2015%205%202%202%202%204%203%202%204%3B%20mso-font-alt%3A%22Times%20New%20Roman%22%3B%20mso-font-charset%3A0%3B%20mso-generic-font-family%3Aswiss%3B%20mso-font-pitch%3Avariable%3B%20mso-font-signature%3A-1610611985%201073750139%200%200%20159%200%3B%7D%20%2F*%20Style%20Definitions%20*%2F%20p.MsoNormal%2C%20li.MsoNormal%2C%20div.MsoNormal%20%7Bmso-style-unhide%3Ano%3B%20mso-style-qformat%3Ayes%3B%20mso-style-parent%3A%22%22%3B%20margin%3A0in%3B%20margin-bottom%3A.0001pt%3B%20mso-pagination%3Awidow-orphan%3B%20font-size%3A11.0pt%3B%20font-family%3A%22Calibri%22%2C%22sans-serif%22%3B%20mso-ascii-font-family%3ACalibri%3B%20mso-ascii-theme-font%3Aminor-latin%3B%20mso-fareast-font-family%3ACalibri%3B%20mso-fareast-theme-font%3Aminor-latin%3B%20mso-hansi-font-family%3ACalibri%3B%20mso-hansi-theme-font%3Aminor-latin%3B%20mso-bidi-font-family%3A%22Times%20New%20Roman%22%3B%20mso-bidi-theme-font%3Aminor-bidi%3B%7D%20.MsoChpDefault%20%7Bmso-style-type%3Aexport-only%3B%20mso-default-props%3Ayes%3B%20mso-ascii-font-family%3ACalibri%3B%20mso-ascii-theme-font%3Aminor-latin%3B%20mso-fareast-font-family%3ACalibri%3B%20mso-fareast-theme-font%3Aminor-latin%3B%20mso-hansi-font-family%3ACalibri%3B%20mso-hansi-theme-font%3Aminor-latin%3B%20mso-bidi-font-family%3A%22Times%20New%20Roman%22%3B%20mso-bidi-theme-font%3Aminor-bidi%3B%7D%20%40page%20WordSection1%20%7Bsize%3A8.5in%2011.0in%3B%20margin%3A1.0in%201.0in%201.0in%201.0in%3B%20mso-header-margin%3A.5in%3B%20mso-footer-margin%3A.5in%3B%20mso-paper-source%3A0%3B%7D%20div.WordSection1%20%7Bpage%3AWordSection1%3B%7D%20--%26gt%3B%20%3C%2Fstyle%3E%20%3C%21--%5Bif%20gte%20mso%2010%5D%3E%20%3Cstyle%3E%20%2F*%20Style%20Definitions%20*%2F%20table.MsoNormalTable%20%7Bmso-style-name%3A%22Table%20Normal%22%3B%20mso-tstyle-rowband-size%3A0%3B%20mso-tstyle-colband-size%3A0%3B%20mso-style-noshow%3Ayes%3B%20mso-style-priority%3A99%3B%20mso-style-qformat%3Ayes%3B%20mso-style-parent%3A%22%22%3B%20mso-padding-alt%3A0in%205.4pt%200in%205.4pt%3B%20mso-para-margin%3A0in%3B%20mso-para-margin-bottom%3A.0001pt%3B%20mso-pagination%3Awidow-orphan%3B%20font-size%3A11.0pt%3B%20font-family%3A%22Calibri%22%2C%22sans-serif%22%3B%20mso-ascii-font-family%3ACalibri%3B%20mso-ascii-theme-font%3Aminor-latin%3B%20mso-fareast-font-family%3A%22Times%20New%20Roman%22%3B%20mso-fareast-theme-font%3Aminor-fareast%3B%20mso-hansi-font-family%3ACalibri%3B%20mso-hansi-theme-font%3Aminor-latin%3B%7D%20%3C%2Fstyle%3E%20%3C%21%5Bendif%5D--%3E%3Cspan%20style%3D%22font-size%3A%2011pt%3B%20font-family%3A%20%26quot%3BCalibri%26quot%3B%2C%26quot%3Bsans-serif%26quot%3B%3B%22%3ECovers%20Service%20Pack%201%21%3C%2Fspan%3E%3Cbr%20%2F%3E%3Cbr%20%2F%3EApply%20best%20practices%20for%20administering%20Exchange%20Server%202010%20and%20SP1--and%20optimize%20your%20operational%20efficiency%20and%20results.%20This%20guide%20captures%20the%20field-tested%20solutions%2C%20real-world%20lessons%2C%20and%20candid%20advice%20of%20practitioners%20across%20the%20range%20of%20business%20and%20technical%20scenarios--and%20across%20the%20IT%20life%20cycle.%20Gain%20expert%20insights%20on%20what%20works%2C%20where%20to%20make%20tradeoffs%2C%20and%20how%20to%20implement%20the%20best%20decisions%20for%20your%20organization.%20%3Cp%3EDiscover%20how%20to%3A%3Cbr%20%2F%3E%3C%2Fp%3E%20%3Cdiv%20style%3D%22text-align%3A%20left%3B%22%3E%20%3Cul%3E%20%3Cli%3EApply%20scenario-based%20guidance%20for%20planning%20and%20deployment%3C%2Fli%3E%20%3Cli%3EPrepare%20Active%20Directory%28R%29%20and%20the%20server%20environment%3C%2Fli%3E%20%3Cli%3EValidate%20requirements%20and%20understand%20configuration%20tradeoffs%3C%2Fli%3E%20%3Cli%3ELearn%20best%20ways%20to%20manage%20users%2C%20mailboxes%2C%20and%20permissions%3C%2Fli%3E%20%3Cli%3EOptimize%20message%20routing%20and%20security%3C%2Fli%3E%20%3Cli%3EDesign%20and%20implement%20Unified%20Messaging%20and%20federated%20delegation%3C%2Fli%3E%20%3Cli%3EDefine%20your%20archiving%20and%20compliance%20strategy%3C%2Fli%3E%20%3Cli%3EBuild%20high%20availability%20into%20your%20backup%20and%20recovery%20plan%3C%2Fli%3E%20%3Cli%3EMonitor%20and%20tune%20performance%3C%2Fli%3E%20%3Cli%3EApply%20proven%20troubleshooting%20tactics%3C%2Fli%3E%20%3C%2Ful%3E%20%3Cp%3ECompanion%20Web%20content%20features%3A%3Cbr%20%2F%3E%3C%2Fp%3E%20%3Cul%3E%20%3Cli%3EChecklists%2C%20planning%20worksheets%2C%20and%20other%20job%20aids%3C%2Fli%3E%20%3Cli%3EQuick%20Reference%20Guide%20to%20best%20practices%2C%20including%20recommended%20%3Cli%3EFast-reference%20card%20for%20using%20Windows%20PowerShell%28TM%29%20Entered%20e-mail%20%3Cbr%20%2F%3E%3C%2Fli%3E%20%3C%2Ful%3E%20%3Cbr%20%2F%3E",
+	    bookDescriptionAvailableHeight,
+	    minBookDescriptionInitialHeight = 112,
+	    options = {},
+	    iframeId = "bookDesc_iframe";</p>
+<p>    function resizeCallback() {
+        P.guardFatal("bookDescription", function() {
+            // Get the line-height of the iframe
+            var iframe = document.getElementById(iframeId);
+            var iframeDocument = iframe.contentDocument;</p>
+<p>            if (false &amp;&amp; iframeDocument &amp;&amp; iframeDocument.defaultView) {
+                // Set the height to the number of lines specified
+                var numLines = parseInt(0, 10);</p>
+<p>                // Get the line-height of the iframe
+                var iframeContent = iframeDocument.getElementById("iframeContent");</p>
+<p>                // Compute the line height
+                var lineHeight = iframeDocument.defaultView.getComputedStyle(iframeContent, null).getPropertyValue("line-height");</p>
+<p>                // Parse the line height
+                lineHeight = parseFloat(lineHeight);
+                bookDescriptionAvailableHeight = Math.round(lineHeight * numLines);
+            } else {
+                var bdOffsetTop = document.getElementById("bookDescription_feature_div").offsetTop;
+                var imageBlockOffsetTop = document.getElementById("booksImageBlock_feature_div").offsetTop;
+                var imageBlockHeight = document.getElementById("booksImageBlock_feature_div").offsetHeight;
+                bookDescriptionAvailableHeight = imageBlockOffsetTop + imageBlockHeight -bdOffsetTop - 30;
+                if(bookDescriptionAvailableHeight &lt; minBookDescriptionInitialHeight) {
+                    bookDescriptionAvailableHeight = minBookDescriptionInitialHeight;
+                }
+            }</p>
+<p>            var psTotalHeight = document.getElementById("postBodyPS").offsetHeight;</p>
+<p>            if(psTotalHeight &gt; bookDescriptionAvailableHeight + 30){
+                if(document.getElementById("bdSeeLessPrompt").style.display == "none"){
+                    document.getElementById("outer_postBodyPS").style.height = bookDescriptionAvailableHeight + 'px';
+                    document.getElementById("psPlaceHolder").style.display ="block";
+                    document.getElementById("bdSeeAllPrompt").style.display ="block";
+                }
+                else{
+                    document.getElementById("outer_postBodyPS").style.height = psTotalHeight + 'px';
+                }
+            }
+            else{
+                document.getElementById("outer_postBodyPS").style.height = psTotalHeight + 'px';
+                document.getElementById("psPlaceHolder").style.display ="none";
+                document.getElementById("bdSeeAllPrompt").style.display ="block";
+                document.getElementById("bdSeeLessPrompt").style.display ="none";
+                document.getElementById("bdExpanderIcon").className = document.getElementById("bdExpanderIcon").className.replace("rotate","");
+            }
+        })();
+    }</p>
+<p>    options.iframeId = iframeId;
+    options.iframeWrapperId = "bookDesc_iframe_wrapper";
+	options.overriddenCSSId = "bookDesc_override_CSS";
+	options.encodedIframeContent = bookDescEncodedData;
+	options.initialResizeCallback = resizeCallback;</p>
+<p>	BookDescriptionIframe = new DynamicIframe(options);
+	P.guardFatal("bookDescription", function() {
+	    BookDescriptionIframe.createIframe();
+	}) ();</p>
+<p>	if ((typeof BookDescriptionIframe != 'undefined') &amp;&amp; (BookDescriptionIframe instanceof DynamicIframe)) {
+	  P.when('jQuery').execute(function($) {
+	    $(window).resize(function() {
+	        P.guardFatal("bookDescription", function() {
+	            BookDescriptionIframe.resizeIframe(resizeCallback);
+	        }) ();
+	    });</p>
+<p>	    $(window).bind('imageResize', function() {
+	        P.guardFatal("bookDescription", function() {
+	            BookDescriptionIframe.resizeIframe(resizeCallback);
+	        }) ();
+	    });
+	  });
+	}
+});
+</script></div>
+</div>
+									<div class="book-details">
+										<h2>Book details</h2>
+										<ul>
+										<li><span>Authors:</span>Siegfried Jagott, Joel Stidley</li>										<li><span>Publisher:</span>Microsoft Press</li>
+																				<li><span>Publication date:</span>July 6, 2010</li>										<li><span>ISBN-10:</span>0735627193</li>										<li><span>ISBN-13:</span>978-0735627192</li>										<li><span>Pages:</span>910 pages</li>										<li><span>Format:</span>pdf</li>										<li><span>Size:</span>16.43Mb</li>										</ul>
+									</div>
+									<div class="download-box">
+										<a href="#" class='btn btn-download open-modal' data-modal="#modal1">Get Download Link</a>
+
+										<div class='modal' id='modal1'>
+											<div class='content-dl'>
+												<h2 class='title-dl'>Here's your download link</h2>
+												<input onClick="this.select();" type="text" name="dl-link" id="dl-link" value="generating download link..." readonly>
+												<a class='btn close-modal' data-modal="#modal1" href="#">Close</a>
+												<a class='btn go-to' data-modal="#modal1" href="#">Download</a>
+	</div>	
+</div>	
+									</div><!-- .download-box -->
+																		<div class="btm-post-meta">
+																					<p class="post-btm-cats"><span class="meta-label">Categories:</span><a href="https://it-eb.com/category/software/" rel="category tag">Software</a>&#8203;<a href="https://it-eb.com/category/sysadmin/" rel="category tag">Sysadmin</a> </p>
+																													</div>
+																	</div>
+
+
+								
+
+
+	<section class="related-posts content-box">
+
+		<h4 class="related-head">Related Posts</h4>
+		<ul class="related-posts-list">
+
+
+			
+				<li class="related-article">
+					<article class="post-12101 post type-post status-publish format-standard hentry category-algorithms category-engineering category-machine-learning category-networking category-sysadmin category-web-development">
+
+						<figure class="post-thumbnail">
+							<a href="https://it-eb.com/classification-networks-algorithm-springerbriefs-technology-14/">
+								<img src="https://it-eb.com/covers/6c/6c419dae0536ff3056f0f706be854839.jpg" height="250" width="500">							</a>
+						</figure>
+
+						<div class="post-content">
+							<div class="post-category"><a href="https://it-eb.com/category/algorithms/" rel="category tag">Algorithms</a> / <a href="https://it-eb.com/category/engineering/" rel="category tag">Engineering</a> / <a href="https://it-eb.com/category/machine-learning/" rel="category tag">Machine Learning</a> / <a href="https://it-eb.com/category/networking/" rel="category tag">Networking</a> / <a href="https://it-eb.com/category/sysadmin/" rel="category tag">Sysadmin</a> / <a href="https://it-eb.com/category/web-development/" rel="category tag">Web Development</a></div>
+							<h5 class="post-title"><a href="https://it-eb.com/classification-networks-algorithm-springerbriefs-technology-14/">New Classification Method Based on Modular Neural Networks with the LVQ Algorithm and Type-2 Fuzzy Logic (SpringerBriefs in Applied Sciences and Technology)</a></h5>
+						</div>
+
+					</article>
+				</li>
+
+			
+				<li class="related-article">
+					<article class="post-371 post type-post status-publish format-standard hentry category-manual category-software category-web-development">
+
+						<figure class="post-thumbnail">
+							<a href="https://it-eb.com/dreamweaver-cs4-bible-joseph-lowery-9/">
+								<img src="https://it-eb.com/covers/33/3384aa2b3efc8ce3057756d684c9000a.jpg" height="250" width="500">							</a>
+						</figure>
+
+						<div class="post-content">
+							<div class="post-category"><a href="https://it-eb.com/category/manual/" rel="category tag">Manual</a> / <a href="https://it-eb.com/category/software/" rel="category tag">Software</a> / <a href="https://it-eb.com/category/web-development/" rel="category tag">Web Development</a></div>
+							<h5 class="post-title"><a href="https://it-eb.com/dreamweaver-cs4-bible-joseph-lowery-9/">Dreamweaver CS4 Bible</a></h5>
+						</div>
+
+					</article>
+				</li>
+
+			
+				<li class="related-article">
+					<article class="post-4047 post type-post status-publish format-standard hentry category-databases category-programming category-software category-sysadmin">
+
+						<figure class="post-thumbnail">
+							<a href="https://it-eb.com/professional-microsoft-integration-services-programmer-3685/">
+								<img src="https://it-eb.com/covers/9d/9de6f436c9678e07672a7e56732ca1fd.jpg" height="250" width="500">							</a>
+						</figure>
+
+						<div class="post-content">
+							<div class="post-category"><a href="https://it-eb.com/category/databases/" rel="category tag">Databases</a> / <a href="https://it-eb.com/category/programming/" rel="category tag">Programming</a> / <a href="https://it-eb.com/category/software/" rel="category tag">Software</a> / <a href="https://it-eb.com/category/sysadmin/" rel="category tag">Sysadmin</a></div>
+							<h5 class="post-title"><a href="https://it-eb.com/professional-microsoft-integration-services-programmer-3685/">Professional Microsoft SQL Server 2014 Integration Services (Wrox Programmer to Programmer)</a></h5>
+						</div>
+
+					</article>
+				</li>
+
+			
+		</ul>
+
+	</section>
+
+
+
+<section id="comments" class="content-box">
+
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/microsoft%c2%ae-exchange-server-2010-practices-2774/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="http://it-eb.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" aria-required='true' required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" aria-required='true' required='required' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" /></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='3136' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><div class="inv-recaptcha-holder"></div>			</form>
+			</div><!-- #respond -->
+	
+</section>
+
+<nav class="post-nav">
+
+	<ul>
+
+		<li class="prev"><a href="https://it-eb.com/microsoft-exchange-2010-powershell-cookbook-2773/" rel="prev"><div class="post-thumbnail"></div> <span class="chevron-left" aria-hidden="true"></span> <p class="nav-title">Prev Post</p> <p class="post-title">Microsoft Exchange 2010 PowerShell Cookbook</p></a></li><li class="next"><a href="https://it-eb.com/microsoft-exchange-server-2010-inside-2775/" rel="next"><div class="post-thumbnail"></div> <span class="chevron-right" aria-hidden="true"></span> <p class="nav-title">Next Post</p> <p class="post-title">Microsoft Exchange Server 2010 Inside Out</p></a></li>
+	</ul>
+
+</nav>
+
+
+							</div><!--/.content-inside-->
+
+						</div><!--/.content-inner-->
+
+					</div><!--/.content-->
+
+					
+
+	<aside id="sidebar-s1" class="sidebar-s1">
+
+		<div class="sidebar">
+
+			<div class="sidebar-inner">
+
+				<section id="search-2" class="widget widget_search">
+<form method="get" class="search-form" action="https://it-eb.com/">
+	<input type="search" class="search-inner" name="s" placeholder="Title, ISBN, Author, Publisher, or whatever you come up with..." />
+	<button type="submit" class="search-submit"><i class="icon search"></i></button>
+</form>
+</section>		<section id="recent-posts-2" class="widget widget_recent_entries">		<h2 class="widget-title">Recent Posts</h2>		<ul>
+					<li>
+				<a href="https://it-eb.com/brief-history-everything-wireless-invisible-15/">A Brief History of Everything Wireless: How Invisible Waves Have Changed the World</a>
+						</li>
+					<li>
+				<a href="https://it-eb.com/computational-intelligence-introduction-andries-engelbrecht-10/">Computational Intelligence: An Introduction</a>
+						</li>
+					<li>
+				<a href="https://it-eb.com/counting-monitoring-large-scale-rfid-systems-9/">Tag Counting and Monitoring in Large-Scale RFID Systems: Theoretical Foundations and Algorithm Design</a>
+						</li>
+					<li>
+				<a href="https://it-eb.com/python-code-warrior-working-wmi-instrumentation-5/">Python Code Warrior-Working with WMI: Working Windows Management Instrumentation and creating reports By Example</a>
+						</li>
+					<li>
+				<a href="https://it-eb.com/python-tricks-buffet-awesome-features-4/">Python Tricks: A Buffet of Awesome Python Features</a>
+						</li>
+				</ul>
+		</section>		<section id="recent-comments-2" class="widget widget_recent_comments"><h2 class="widget-title">Recent Comments</h2><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">iteb</span> on <a href="https://it-eb.com/plug-php-solutions-practical-problems-329/#comment-71">Plug-In PHP: 100 Power Solutions: Simple Solutions to Practical PHP Problems</a></li><li class="recentcomments"><span class="comment-author-link">Cedric</span> on <a href="https://it-eb.com/plug-php-solutions-practical-problems-329/#comment-70">Plug-In PHP: 100 Power Solutions: Simple Solutions to Practical PHP Problems</a></li><li class="recentcomments"><span class="comment-author-link">iteb</span> on <a href="https://it-eb.com/learning-awk-programming-cutting-edge-text-processing-5/#comment-69">Learning AWK Programming: A fast, and simple cutting-edge utility for text-processing on the Unix-like environment</a></li><li class="recentcomments"><span class="comment-author-link">iteb</span> on <a href="https://it-eb.com/electronics-revolution-inventing-future-springer-19/#comment-68">The Electronics Revolution: Inventing the Future (Springer Praxis Books)</a></li><li class="recentcomments"><span class="comment-author-link">EB</span> on <a href="https://it-eb.com/electronics-revolution-inventing-future-springer-19/#comment-67">The Electronics Revolution: Inventing the Future (Springer Praxis Books)</a></li></ul></section><section id="categories-2" class="widget widget_categories"><h2 class="widget-title">Categories</h2>		<ul>
+	<li class="cat-item cat-item-19"><a href="https://it-eb.com/category/algorithms/" >Algorithms</a>
+</li>
+	<li class="cat-item cat-item-16"><a href="https://it-eb.com/category/big-data/" >Big Data</a>
+</li>
+	<li class="cat-item cat-item-35"><a href="https://it-eb.com/category/cloud-computing/" >Cloud Computing</a>
+</li>
+	<li class="cat-item cat-item-26"><a href="https://it-eb.com/category/computational-biology/" >Computational Biology</a>
+</li>
+	<li class="cat-item cat-item-31"><a href="https://it-eb.com/category/computer-science/" >Computer Science</a>
+</li>
+	<li class="cat-item cat-item-38"><a href="https://it-eb.com/category/computing/" >Computing</a>
+</li>
+	<li class="cat-item cat-item-46"><a href="https://it-eb.com/category/data-management/" >Data Management</a>
+</li>
+	<li class="cat-item cat-item-14"><a href="https://it-eb.com/category/data-mining/" >Data Mining</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://it-eb.com/category/databases/" >Databases</a>
+</li>
+	<li class="cat-item cat-item-45"><a href="https://it-eb.com/category/debugging-and-troubleshooting/" >Debugging and Troubleshooting</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="https://it-eb.com/category/designing/" >Designing</a>
+</li>
+	<li class="cat-item cat-item-41"><a href="https://it-eb.com/category/digital-design-media/" >Digital Design/Media</a>
+</li>
+	<li class="cat-item cat-item-37"><a href="https://it-eb.com/category/engineering/" >Engineering</a>
+</li>
+	<li class="cat-item cat-item-12"><a href="https://it-eb.com/category/game-development/" >Game Development</a>
+</li>
+	<li class="cat-item cat-item-33"><a href="https://it-eb.com/category/hacking/" >Hacking</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="https://it-eb.com/category/hardware/" >Hardware</a>
+</li>
+	<li class="cat-item cat-item-29"><a href="https://it-eb.com/category/image-processing/" >Image Processing</a>
+</li>
+	<li class="cat-item cat-item-47"><a href="https://it-eb.com/category/internet-of-things/" >Internet of Things</a>
+</li>
+	<li class="cat-item cat-item-15"><a href="https://it-eb.com/category/iot/" >IoT</a>
+</li>
+	<li class="cat-item cat-item-22"><a href="https://it-eb.com/category/linux/" >Linux</a>
+</li>
+	<li class="cat-item cat-item-32"><a href="https://it-eb.com/category/machine-learning/" >Machine Learning</a>
+</li>
+	<li class="cat-item cat-item-27"><a href="https://it-eb.com/category/management/" >Management</a>
+</li>
+	<li class="cat-item cat-item-34"><a href="https://it-eb.com/category/manual/" >Manual</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="https://it-eb.com/category/mobile-development/" >Mobile Development</a>
+</li>
+	<li class="cat-item cat-item-28"><a href="https://it-eb.com/category/netonets/" >NetoNets</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://it-eb.com/category/networking/" >Networking</a>
+</li>
+	<li class="cat-item cat-item-24"><a href="https://it-eb.com/category/operating-systems/" >Operating Systems</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="https://it-eb.com/category/programming/" >Programming</a>
+</li>
+	<li class="cat-item cat-item-18"><a href="https://it-eb.com/category/robotics/" >Robotics</a>
+</li>
+	<li class="cat-item cat-item-36"><a href="https://it-eb.com/category/sap/" >SAP</a>
+</li>
+	<li class="cat-item cat-item-43"><a href="https://it-eb.com/category/scripting/" >Scripting</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="https://it-eb.com/category/security/" >Security</a>
+</li>
+	<li class="cat-item cat-item-40"><a href="https://it-eb.com/category/seo/" >SEO</a>
+</li>
+	<li class="cat-item cat-item-30"><a href="https://it-eb.com/category/signal-processing/" >Signal Processing</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="https://it-eb.com/category/software/" >Software</a>
+</li>
+	<li class="cat-item cat-item-17"><a href="https://it-eb.com/category/software-development/" >Software Development</a>
+</li>
+	<li class="cat-item cat-item-25"><a href="https://it-eb.com/category/software-quality/" >Software Quality</a>
+</li>
+	<li class="cat-item cat-item-44"><a href="https://it-eb.com/category/sysadmin/" >Sysadmin</a>
+</li>
+	<li class="cat-item cat-item-13"><a href="https://it-eb.com/category/telecommunications/" >Telecommunications</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="https://it-eb.com/category/testing/" >Testing</a>
+</li>
+	<li class="cat-item cat-item-39"><a href="https://it-eb.com/category/tips-and-tricks/" >Tips and Tricks</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://it-eb.com/category/uncategorized/" >Uncategorized</a>
+</li>
+	<li class="cat-item cat-item-42"><a href="https://it-eb.com/category/version-control/" >Version Control</a>
+</li>
+	<li class="cat-item cat-item-2"><a href="https://it-eb.com/category/web-development/" >Web Development</a>
+</li>
+		</ul>
+</section>
+			</div>
+
+		</div>
+
+	</aside><!--/.sidebar-->
+
+
+				</div><!--/.container-->
+
+			</div><!--/.container-outer-->
+
+		</article>
+
+	</main>
+
+
+
+<footer id="footer" class="footer">
+	<div class="container">
+
+		<div class="copyright">
+
+			<p>
+				&copy;2018 <a href="https://it-eb.com">Technology and Engineering eBooks</a>			</p>
+
+							<p>
+					Powered by Wordpress. Theme: Coldbox.				</p>
+			
+		</div>
+
+		
+	</div><!--/.container-->
+
+	<a id="back-to-top" class="noscroll" href="#"><span class="chevron-up"></span></a>
+
+</footer>
+
+<div class="modal-search-form">
+<form method="get" class="search-form" action="https://it-eb.com/">
+	<input type="search" class="search-inner" name="s" placeholder="Title, ISBN, Author, Publisher, or whatever you come up with..." />
+	<button type="submit" class="search-submit"><i class="icon search"></i></button>
+</form>
+<div class="close-toggle"><span class="top"></span><span class="bottom"></span><span class="label">Close</span></div></div>
+
+
+<script type='text/javascript'>
+var renderInvisibleReCaptcha = function() {
+
+    for (var i = 0; i < document.forms.length; ++i) {
+        var form = document.forms[i];
+        var holder = form.querySelector('.inv-recaptcha-holder');
+
+        if (null === holder) continue;
+		holder.innerHTML = '';
+
+        (function(frm){
+			var cf7SubmitElm = frm.querySelector('.wpcf7-submit');
+            var holderId = grecaptcha.render(holder,{
+                'sitekey': '6LchVTgUAAAAAORGBFITAKda3kZT7sv3xgtP9n6n', 'size': 'invisible', 'badge' : 'bottomleft',
+                'callback' : function (recaptchaToken) {
+					((null !== cf7SubmitElm) && (typeof jQuery != 'undefined')) ? jQuery(frm).submit() : HTMLFormElement.prototype.submit.call(frm);
+                },
+                'expired-callback' : function(){grecaptcha.reset(holderId);}
+            });
+
+            frm.onsubmit = function (evt){evt.preventDefault();grecaptcha.execute(holderId);};
+
+			if(null !== cf7SubmitElm && (typeof jQuery != 'undefined') ){
+				jQuery(cf7SubmitElm).one('click', function(clickEvt){
+					clickEvt.preventDefault();
+					grecaptcha.execute(holderId);
+				});
+			}
+
+        })(form);
+    }
+};
+</script>
+<script type='text/javascript' async defer src='https://www.google.com/recaptcha/api.js?onload=renderInvisibleReCaptcha&#038;render=explicit&#038;hl=en'></script>
+<script type='text/javascript'>
+post_id = 3136;
+</script>
+<script type='text/javascript' src='http://it-eb.com/wp-content/themes/iteb/custom.js?ver=1.1'></script>
+<script type='text/javascript' src='http://it-eb.com/wp-includes/js/comment-reply.min.js?ver=4.8.2'></script>
+<script type='text/javascript' src='http://it-eb.com/wp-content/themes/coldbox/assets/js/cd-scripts.min.js?ver=1.2.7'></script>
+<script type='text/javascript'>
+jQuery(function($) { $('.entry img').parent('a').css({'box-shadow':'none'}); });
+</script>
+<script type='text/javascript' src='http://it-eb.com/wp-includes/js/imagesloaded.min.js?ver=3.2.0'></script>
+<script type='text/javascript' src='http://it-eb.com/wp-includes/js/masonry.min.js?ver=3.3.2'></script>
+<script type='text/javascript'>
+jQuery(window).on("load resize",function(){window.matchMedia("(max-width: 980px) and (min-width: 641px)").matches||jQuery("body").hasClass("bottom-sidebar-s1")?jQuery("#sidebar-s1 .sidebar-inner").imagesLoaded(function(){jQuery("#sidebar-s1 .sidebar-inner").masonry({itemSelector:".widget",percentPosition:!0,isAnimated:!0}),jQuery(".widget").css({position:"absolute"})}):jQuery(".widget").css({position:"",top:"",left:""})});
+</script>
+<script type='text/javascript' src='http://it-eb.com/wp-includes/js/wp-embed.min.js?ver=4.8.2'></script>
+</body></html>
+

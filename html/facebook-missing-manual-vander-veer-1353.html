@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta name="msvalidate.01" content="095D4FA2E4824BED6B22102FB8CE263E" />
+	<meta name="yandex-verification" content="e9a4e56df6df93bd" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109518968-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-109518968-1');
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta content="#494949" name="theme-color">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<title>Facebook: The Missing Manual &#8211; Technology and Engineering eBooks</title>
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel='dns-prefetch' href='//it-eb.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Technology and Engineering eBooks &raquo; Feed" href="https://it-eb.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Technology and Engineering eBooks &raquo; Comments Feed" href="https://it-eb.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Technology and Engineering eBooks &raquo; Facebook: The Missing Manual Comments Feed" href="https://it-eb.com/facebook-missing-manual-vander-veer-1353/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/it-eb.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.2"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='cd-style-css'  href='http://it-eb.com/wp-content/themes/coldbox/style.css?ver=4.8.2' type='text/css' media='all' />
+<style id='cd-style-inline-css' type='text/css'>
+.prev .post-thumbnail{background-image:url("https://it-eb.com/covers/4a/4a73ea6c5fcbc046e05dc4db13ea69e0.jpg")}
+.next .post-thumbnail{background-image:url("https://it-eb.com/covers/ee/eee41a448a3f4f8667c27442b6c06d7e.jpg")}
+body { font-family: Source Sans Pro, Arial, sans-serif; }
+.entry a, .title-box a:hover, .post-meta a:hover, .post-meta.content-box a:hover, .post-btm-tags a:hover, p.post-btm-cats a:hover, .related-posts .post-category a, .related-posts .post:hover .post-title, .post-pages, .grid-view .post-inner a:hover .post-title, .standard-view .post-title:hover, ul.page-numbers, .widget #wp-calendar a, .widget .widgets-list-layout li:hover a, #comment-list .comment-author .fn a, #respond .logged-in-as a:hover, .comment-pages, .comment-pages a,.comment-pages span, .comment-body a, .comment-tabmenu .active > a, .standard-view .post-inner:hover .post-title, .widget .textwidget a { color: #494949; }
+			#comments input[type=submit], .post-tags a, .post-tags a, .main-archive .post-date, .action-bar, input[type=submit]:hover, input[type=submit]:focus, input[type=button]:hover, input[type=button]:focus, button[type=submit]:hover, button[type=submit]:focus, button[type=button]:hover, button[type=button]:focus { background-color: #494949; }
+			textarea:focus { border-color: #494949; }
+			.comment-pages > a:hover, .comment-pages span, .post-pages > a:hover>span,.post-pages>span, ul.page-numbers span.page-numbers.current, ul.page-numbers a.page-numbers:hover { border-bottom-color: #494949; }
+			::selection { background-color: #494949; }
+			::moz-selection { background-color: #494949; }
+.site-info,.site-title{color:#;}.site-description{color:rgb(10, 10, 10);}
+			#header-menu .menu-container > li > a{color:#}#header-menu .menu-container > li:hover > a{color:rgb(0, 0, -20)}
+			:root body .search-toggle span.icon.search{border-color:#}:root body .search-toggle span.icon.search::before,.nav-toggle .bottom, .nav-toggle .middle, .nav-toggle .top{background-color:#}
+</style>
+<link rel='stylesheet' id='child-style-css'  href='http://it-eb.com/wp-content/themes/iteb/style.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='FontAwesome-css'  href='http://it-eb.com/wp-content/themes/coldbox/fonts/fontawesome/css/font-awesome.min.css?ver=4.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='GoogleFonts-css'  href='//fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700&#038;ver=4.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='SourceSansPro-css'  href='//fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400%2C400i%2C600%2C600i%2C700&#038;ver=4.8.2' type='text/css' media='all' />
+<script type='text/javascript' src='http://it-eb.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://it-eb.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://it-eb.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://it-eb.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://it-eb.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Facebook Marketing For Dummies' href='https://it-eb.com/facebook-marketing-dummies-john-haydon-1352/' />
+<link rel='next' title='Fast ASP.NET Websites' href='https://it-eb.com/fast-asp-net-websites-dean-alan-1354/' />
+<meta name="generator" content="WordPress 4.8.2" />
+<link rel="canonical" href="https://it-eb.com/facebook-missing-manual-vander-veer-1353/" />
+<link rel='shortlink' href='https://it-eb.com/?p=1715' />
+<link rel="alternate" type="application/json+oembed" href="https://it-eb.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fit-eb.com%2Ffacebook-missing-manual-vander-veer-1353%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://it-eb.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fit-eb.com%2Ffacebook-missing-manual-vander-veer-1353%2F&#038;format=xml" />
+<!-- FAVHERO FAVICON START --><!-- For iPad with high-resolution Retina display running iOS ≥ 7: --><link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://it-eb.com/wp-content/uploads/2017/11/favicon-152.png"><!-- Standard: --><link rel="icon" sizes="152x152" href="https://it-eb.com/wp-content/uploads/2017/11/favicon-152.png"><meta name="msapplication-TileColor" content="#FFFFFF"><meta name="msapplication-TileImage" content="https://it-eb.com/wp-content/uploads/2017/11/favicon-144.png"><!-- For iPad with high-resolution Retina display running iOS ≤ 6: --><link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://it-eb.com/wp-content/uploads/2017/11/favicon-144.png"><!-- For iPhone with high-resolution Retina display running iOS ≥ 7: --><link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://it-eb.com/wp-content/uploads/2017/11/favicon-120.png"><!-- For first- and second-generation iPad: --><link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://it-eb.com/wp-content/uploads/2017/11/favicon-72.png"><!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: --><link rel="apple-touch-icon-precomposed" href="https://it-eb.com/wp-content/uploads/2017/11/favicon-57.png"><!-- FAVHERO FAVICON END --><link rel="pingback" href="http://it-eb.com/xmlrpc.php">
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		</head>
+
+<body class="post-template-default single single-post postid-1715 single-format-standard wp-custom-logo header-menu-enabled sticky-header left-sidebar-s1 header-column">
+
+
+	<header id="header" class="header">
+
+		<div class="header-inner container">
+
+			<div class="site-info">
+				<h1 class="site-title">
+					<a href="https://it-eb.com" title="Technology and Engineering eBooks"><img src="https://it-eb.com/wp-content/uploads/2017/11/logo.png" alt="Technology and Engineering eBooks" /></a>				</h1>
+									<p class="site-description"></p>
+							</div>
+
+			<div class="search-toggle"><span class="icon search"></span></div>
+							<button class="nav-toggle header-menu" on="tap:amp-sidebar.open"><span class="top"></span><span class="middle"></span><span class="bottom"></span></button>
+						
+			<nav id="header-menu"><ul id="header-nav" class="menu-container"><li id="menu-item-11730" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11730"><a href="https://it-eb.com/category/big-data/">Big Data</a></li>
+<li id="menu-item-11732" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11732"><a href="https://it-eb.com/category/databases/">Databases</a></li>
+<li id="menu-item-11735" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11735"><a href="https://it-eb.com/category/hardware/">Hardware</a></li>
+<li id="menu-item-11737" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11737"><a href="https://it-eb.com/category/mobile-development/">Mobile Development</a></li>
+<li id="menu-item-11738" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11738"><a href="https://it-eb.com/category/networking/">Networking</a></li>
+<li id="menu-item-11741" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11741"><a href="https://it-eb.com/category/security/">Security</a></li>
+<li id="menu-item-11742" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11742"><a href="https://it-eb.com/category/software/">Software</a></li>
+<li id="menu-item-11747" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11747"><a href="https://it-eb.com/category/web-development/">Web Development</a></li>
+<li id="menu-item-11947" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-11947"><a href="#">Others</a>
+<ul class="sub-menu">
+	<li id="menu-item-11948" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11948"><a href="https://it-eb.com/category/algorithms/">Algorithms</a></li>
+	<li id="menu-item-11949" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11949"><a href="https://it-eb.com/category/cloud-computing/">Cloud Computing</a></li>
+	<li id="menu-item-11950" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11950"><a href="https://it-eb.com/category/computational-biology/">Computational Biology</a></li>
+	<li id="menu-item-11951" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11951"><a href="https://it-eb.com/category/computer-science/">Computer Science</a></li>
+	<li id="menu-item-11952" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11952"><a href="https://it-eb.com/category/computing/">Computing</a></li>
+	<li id="menu-item-11953" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11953"><a href="https://it-eb.com/category/data-management/">Data Management</a></li>
+	<li id="menu-item-11954" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11954"><a href="https://it-eb.com/category/data-mining/">Data Mining</a></li>
+	<li id="menu-item-11955" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11955"><a href="https://it-eb.com/category/debugging-and-troubleshooting/">Debugging and Troubleshooting</a></li>
+	<li id="menu-item-11956" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11956"><a href="https://it-eb.com/category/designing/">Designing</a></li>
+	<li id="menu-item-11957" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11957"><a href="https://it-eb.com/category/digital-design-media/">Digital Design/Media</a></li>
+	<li id="menu-item-11958" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11958"><a href="https://it-eb.com/category/engineering/">Engineering</a></li>
+	<li id="menu-item-11959" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11959"><a href="https://it-eb.com/category/hacking/">Hacking</a></li>
+	<li id="menu-item-11960" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11960"><a href="https://it-eb.com/category/image-processing/">Image Processing</a></li>
+	<li id="menu-item-11961" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11961"><a href="https://it-eb.com/category/internet-of-things/">Internet of Things</a></li>
+	<li id="menu-item-11962" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11962"><a href="https://it-eb.com/category/linux/">Linux</a></li>
+	<li id="menu-item-11963" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11963"><a href="https://it-eb.com/category/machine-learning/">Machine Learning</a></li>
+	<li id="menu-item-11964" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11964"><a href="https://it-eb.com/category/management/">Management</a></li>
+	<li id="menu-item-11965" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-11965"><a href="https://it-eb.com/category/manual/">Manual</a></li>
+	<li id="menu-item-11966" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11966"><a href="https://it-eb.com/category/networking/">Networking</a></li>
+	<li id="menu-item-11967" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11967"><a href="https://it-eb.com/category/operating-systems/">Operating Systems</a></li>
+	<li id="menu-item-11968" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11968"><a href="https://it-eb.com/category/programming/">Programming</a></li>
+	<li id="menu-item-11969" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11969"><a href="https://it-eb.com/category/resource-management/">Resource Management</a></li>
+	<li id="menu-item-11970" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11970"><a href="https://it-eb.com/category/robotics/">Robotics</a></li>
+	<li id="menu-item-11971" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11971"><a href="https://it-eb.com/category/scripting/">Scripting</a></li>
+	<li id="menu-item-11972" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11972"><a href="https://it-eb.com/category/security/">Security</a></li>
+	<li id="menu-item-11973" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11973"><a href="https://it-eb.com/category/seo/">SEO</a></li>
+	<li id="menu-item-11974" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11974"><a href="https://it-eb.com/category/signal-processing/">Signal Processing</a></li>
+	<li id="menu-item-11975" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11975"><a href="https://it-eb.com/category/software-quality/">Software Quality</a></li>
+	<li id="menu-item-11976" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11976"><a href="https://it-eb.com/category/sysadmin/">Sysadmin</a></li>
+	<li id="menu-item-11977" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11977"><a href="https://it-eb.com/category/telecommunications/">Telecommunications</a></li>
+	<li id="menu-item-11978" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11978"><a href="https://it-eb.com/category/testing/">Testing</a></li>
+	<li id="menu-item-11979" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11979"><a href="https://it-eb.com/category/tips-and-tricks/">Tips and Tricks</a></li>
+	<li id="menu-item-11981" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11981"><a href="https://it-eb.com/category/version-control/">Version Control</a></li>
+	<li id="menu-item-11980" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11980"><a href="https://it-eb.com/category/uncategorized/">Uncategorized</a></li>
+</ul>
+</li>
+</ul><!--/#header-nav--></nav>
+		</div>
+
+</header>
+
+
+	<main id="main" class="main-single">
+
+		<article id="post-1715" class="main-inner post-1715 post type-post status-publish format-standard hentry category-manual">
+
+				<header class="title-box">
+		<div class="title-box-inner container">
+			<div class="breadcrumb"><a href="https://it-eb.com">Home</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;<a href="https://it-eb.com/category/manual/" rel="category tag">Manual</a></div>
+			<h1 class="post-title">Facebook: The Missing Manual</h1>
+		</div>
+	</header>
+	
+			<div class="container-outer">
+
+				<div class="container">
+
+					<div class="content">
+
+						<div class="content-inner">
+
+							<div class="content-inside">
+
+								<footer class="post-meta content-box">
+									
+									
+																			<time class="post-date" datetime="">October 21, 2017</time>
+									
+									
+									
+																	</footer>
+
+
+								<div class="entry content-box">
+																		<div class="book-cover"><img src="https://it-eb.com/covers/30/302f5786f47608bc4384e5bbb1fc9c51.jpg"></div>
+									<div class="entry-inner"><div>
+<div>
+<p>Facebook&#8217;s popularity is skyrocketing, drawing more than 400 million people to this combination online village green, personal website creator, and souped-up address book. But one thing you won&#8217;t get when signing up is a printed manual. Enter <i>Facebook: The Missing Manual</i>, Second Edition &#8212; the witty, authoritative guide you need, now revised and updated to include all of Facebook&#8217;s latest features. </p>
+<p> Coverage includes: </p>
+<ul>
+<li><b>Getting started, getting connected.</b> Signing up is easy, but the real payoff comes when you tap into networks of coworkers, classmates, and friends. This book explains it all-including how to pick and choose who gets to see what, and how to steer clear of people you want to avoid. </li>
+<li><b>Adding applications.</b> Ranging from silly (fortune cookies and video games) to serious (goal tracking), thousands of mini-programs can transform your Facebook account into an addictive, one-stop resource. Learn how to find and install your favorites. </li>
+<li><b>Facebook for grownups and businesspeople.</b> Facebook isn&#8217;t just for Junior anymore. Thousands of companies and business professionals use the site for everything from project collaboration and advertising to filling (and finding) jobs. This book is written for adults of all ages. </li>
+<li><b>Protecting your privacy.</b> Creeps are everywhere online, but on Facebook you can feel especially exposed with so much personal info on display. This book offers an easy-to-follow, multi-pronged approach to staying safe.</li>
+</ul>
+</div>
+<p></br><br /></br><span class="h1"> <strong>How-to Create a Facebook Event</strong> </span>   <br /></br><strong> By E. A. Vander Veer</strong>  <br /></br><br /></br>   Whether you want to host a product launch party, start a study group at the local coffee shop, or have a community meeting, it’s easy to set up your own events on Facebook. Here’s what you do: <br /></br><br /></br><strong>1. On your Home page, click the Events link.</strong> </p>
+<p> Note: If an event is closely tied to a Facebook Group you created or that you’ve been made administrator of—you want to set up a monthly face-to-face meeting of yourbook club, for example—you’ll want to head to your Group’s profile page, click Create Group Event, and then follow steps 3–8 below. Doing so tells Facebook that your Group is hosting the event and lets you invite all the Group’s members in one fell swoop by turning on the checkbox next to “Invite Members of the host group [your Group’s name]” that appears on the “Step 3: Invite Friends” tab (see step 8).</p>
+</p>
+<table align="right" bgcolor="#fffff" cellpadding="4" cellspacing="4">
+<tbody>
+<tr>
+<td align="center"><img align="center" border="0" src="https://images-na.ssl-images-amazon.com/images/G/01/books/orly/fb2m_0708.JPG"></img></td>
+</tr>
+</tbody>
+</table>
+<p><strong>2. On the Events page that appears, click the “Create an Event” button.</strong>    </p>
+<p> <strong>3.On the “Step 1: Create Event” page, fill out as many of the fields as possible.</strong> You <em>have</em> to fill out some fields—like the event’s name—but you should fill in as many of the other fields as you can. Doing so makes events easier for people to find, because they can search on every word you add. It also encourages people to RSVP, since the more people know about an event (and the better you make it sound), the more likely they are to attend. Make sure you pick an event name you like, because after you create your event, you can’t change what it’s called. (You can, however, delete the event and create a new one with a different name.)</p>
+<p> <strong>4. Decide how open you want your event to be.</strong> Facebook assumes you want to plan an open event that everyone on the site can view and attend, and that all attendees can contribute to by uploading photos, videos, links, and Wall posts. If that’s fine with you&#8211;for example, if your event is one that’s open to the public and is listed in the local newspapers, or is an attend-in-spirit-only kind of event&#8211;you don’t have to do a thing. Otherwise, you need to click the Privacy drop-down list and choose either Closed or Secret. For most face-to-face events, you’ll want to choose Closed so you don’t get a bunch of riffraff showing up. If you have a very specific, finite guest list and the event is private (such as a business meeting or intimate birthday gathering), choose Secret; that way, you can invite just the folks on your list and not have to worry about strangers requesting invitations.</p>
+<p> <strong>5. Click the Create Event button.</strong> Facebook posts a bare-bones version of your event on the site that people can find in searches (unless you made the event secret).</p>
+<table align="left" bgcolor="#fffff" cellpadding="4" cellspacing="4">
+<tbody>
+<tr>
+<td align="center"><img align="center" border="0" src="https://images-na.ssl-images-amazon.com/images/G/01/books/orly/fb2m_0709.JPG"></img></td>
+</tr>
+</tbody>
+</table>
+<p> <strong>6. On the “Step 2: Add Details” page that appears, browse for the image file you want to appear on your event listing, and then click Upload Picture.</strong> Technically, this step is optional, but an appropriate and clever photo, drawing, or logo will make your event’s listing a lot more appealing.</p>
+<p> <strong>7. Add as much additional info as you want, tweak a few settings, and then click the “Save and Continue” button.</strong> You don’t have to go hog wild, but adding a description and choosing an event type goes a long way toward helping folks find your event.</p>
+<p> <strong>8. Invite some guests</strong>. Facebook lists your friends and Friend Lists on the “Step 3: Invite Friends” page that appears, so all you need to do is choose who you want to invite and then click Send Invitations.</p>
+<p>Note: Facebook events are supposed to be for your friends (or for the members of Groups you’re in charge of). So you can’t invite Facebook members to events unless they’re your friends—but you can invite pals who aren’t yet Facebook members. To do so, on the “Step 3: Invite Friends” page, head to the “Invite People via Email” field and type in email addresses separated by commas, and then click Send Invitations.</p>
+<p> You can change your event after you create it. First, display the event’s profile (on your Home page, click the Events link and then, when the list of your events appears, click the name of the event you want to change). Then, on the right side of the event’s profile page, click one of the options, such as “Edit Event”, “Invite People to Come”, or “Cancel This Event”.</p></div>
+</div>
+									<div class="book-details">
+										<h2>Book details</h2>
+										<ul>
+										<li><span>Authors:</span>E. A. Vander Veer</li>										<li><span>Publisher:</span>O'Reilly Media</li>
+																				<li><span>Publication date:</span>April 19, 2010</li>										<li><span>ISBN-10:</span>144938014X</li>										<li><span>ISBN-13:</span>978-1449380144</li>										<li><span>Pages:</span>272 pages</li>										<li><span>Format:</span>pdf</li>										<li><span>Size:</span>7.85Mb</li>										</ul>
+									</div>
+									<div class="download-box">
+										<a href="#" class='btn btn-download open-modal' data-modal="#modal1">Get Download Link</a>
+
+										<div class='modal' id='modal1'>
+											<div class='content-dl'>
+												<h2 class='title-dl'>Here's your download link</h2>
+												<input onClick="this.select();" type="text" name="dl-link" id="dl-link" value="generating download link..." readonly>
+												<a class='btn close-modal' data-modal="#modal1" href="#">Close</a>
+												<a class='btn go-to' data-modal="#modal1" href="#">Download</a>
+	</div>	
+</div>	
+									</div><!-- .download-box -->
+																		<div class="btm-post-meta">
+																					<p class="post-btm-cats"><span class="meta-label">Categories:</span><a href="https://it-eb.com/category/manual/" rel="category tag">Manual</a> </p>
+																													</div>
+																	</div>
+
+
+								
+
+
+	<section class="related-posts content-box">
+
+		<h4 class="related-head">Related Posts</h4>
+		<ul class="related-posts-list">
+
+
+			
+				<li class="related-article">
+					<article class="post-13190 post type-post status-publish format-standard hentry category-manual category-networking category-security">
+
+						<figure class="post-thumbnail">
+							<a href="https://it-eb.com/computer-network-security-essentials-kevin-3/">
+								<img src="https://it-eb.com/covers/23/2363bfe7f34e4398ebca8ab61c5d45fa.jpg" height="250" width="500">							</a>
+						</figure>
+
+						<div class="post-content">
+							<div class="post-category"><a href="https://it-eb.com/category/manual/" rel="category tag">Manual</a> / <a href="https://it-eb.com/category/networking/" rel="category tag">Networking</a> / <a href="https://it-eb.com/category/security/" rel="category tag">Security</a></div>
+							<h5 class="post-title"><a href="https://it-eb.com/computer-network-security-essentials-kevin-3/">Computer and Network Security Essentials</a></h5>
+						</div>
+
+					</article>
+				</li>
+
+			
+				<li class="related-article">
+					<article class="post-5314 post type-post status-publish format-standard hentry category-manual category-programming">
+
+						<figure class="post-thumbnail">
+							<a href="https://it-eb.com/yui-cookbook-maintainable-applications-cookbooks-4952/">
+								<img src="https://it-eb.com/covers/61/6101cfb32a54031b76943a22bcf3ad42.jpg" height="250" width="500">							</a>
+						</figure>
+
+						<div class="post-content">
+							<div class="post-category"><a href="https://it-eb.com/category/manual/" rel="category tag">Manual</a> / <a href="https://it-eb.com/category/programming/" rel="category tag">Programming</a></div>
+							<h5 class="post-title"><a href="https://it-eb.com/yui-cookbook-maintainable-applications-cookbooks-4952/">YUI 3 Cookbook: Writing Maintainable Applications (Cookbooks (O&#8217;Reilly))</a></h5>
+						</div>
+
+					</article>
+				</li>
+
+			
+				<li class="related-article">
+					<article class="post-8019 post type-post status-publish format-standard hentry category-manual category-web-development">
+
+						<figure class="post-thumbnail">
+							<a href="https://it-eb.com/ember-js-cookbook-erik-hanchett-3235/">
+								<img src="https://it-eb.com/covers/0c/0c0f07f436294367bb8008e893b39c95.jpg" height="250" width="500">							</a>
+						</figure>
+
+						<div class="post-content">
+							<div class="post-category"><a href="https://it-eb.com/category/manual/" rel="category tag">Manual</a> / <a href="https://it-eb.com/category/web-development/" rel="category tag">Web Development</a></div>
+							<h5 class="post-title"><a href="https://it-eb.com/ember-js-cookbook-erik-hanchett-3235/">Ember.js cookbook</a></h5>
+						</div>
+
+					</article>
+				</li>
+
+			
+		</ul>
+
+	</section>
+
+
+
+<section id="comments" class="content-box">
+
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/facebook-missing-manual-vander-veer-1353/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="http://it-eb.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" aria-required='true' required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" aria-required='true' required='required' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" /></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='1715' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><div class="inv-recaptcha-holder"></div>			</form>
+			</div><!-- #respond -->
+	
+</section>
+
+<nav class="post-nav">
+
+	<ul>
+
+		<li class="prev"><a href="https://it-eb.com/facebook-marketing-dummies-john-haydon-1352/" rel="prev"><div class="post-thumbnail"></div> <span class="chevron-left" aria-hidden="true"></span> <p class="nav-title">Prev Post</p> <p class="post-title">Facebook Marketing For Dummies</p></a></li><li class="next"><a href="https://it-eb.com/fast-asp-net-websites-dean-alan-1354/" rel="next"><div class="post-thumbnail"></div> <span class="chevron-right" aria-hidden="true"></span> <p class="nav-title">Next Post</p> <p class="post-title">Fast ASP.NET Websites</p></a></li>
+	</ul>
+
+</nav>
+
+
+							</div><!--/.content-inside-->
+
+						</div><!--/.content-inner-->
+
+					</div><!--/.content-->
+
+					
+
+	<aside id="sidebar-s1" class="sidebar-s1">
+
+		<div class="sidebar">
+
+			<div class="sidebar-inner">
+
+				<section id="search-2" class="widget widget_search">
+<form method="get" class="search-form" action="https://it-eb.com/">
+	<input type="search" class="search-inner" name="s" placeholder="Title, ISBN, Author, Publisher, or whatever you come up with..." />
+	<button type="submit" class="search-submit"><i class="icon search"></i></button>
+</form>
+</section>		<section id="recent-posts-2" class="widget widget_recent_entries">		<h2 class="widget-title">Recent Posts</h2>		<ul>
+					<li>
+				<a href="https://it-eb.com/brief-history-everything-wireless-invisible-15/">A Brief History of Everything Wireless: How Invisible Waves Have Changed the World</a>
+						</li>
+					<li>
+				<a href="https://it-eb.com/computational-intelligence-introduction-andries-engelbrecht-10/">Computational Intelligence: An Introduction</a>
+						</li>
+					<li>
+				<a href="https://it-eb.com/counting-monitoring-large-scale-rfid-systems-9/">Tag Counting and Monitoring in Large-Scale RFID Systems: Theoretical Foundations and Algorithm Design</a>
+						</li>
+					<li>
+				<a href="https://it-eb.com/python-code-warrior-working-wmi-instrumentation-5/">Python Code Warrior-Working with WMI: Working Windows Management Instrumentation and creating reports By Example</a>
+						</li>
+					<li>
+				<a href="https://it-eb.com/python-tricks-buffet-awesome-features-4/">Python Tricks: A Buffet of Awesome Python Features</a>
+						</li>
+				</ul>
+		</section>		<section id="recent-comments-2" class="widget widget_recent_comments"><h2 class="widget-title">Recent Comments</h2><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">iteb</span> on <a href="https://it-eb.com/plug-php-solutions-practical-problems-329/#comment-71">Plug-In PHP: 100 Power Solutions: Simple Solutions to Practical PHP Problems</a></li><li class="recentcomments"><span class="comment-author-link">Cedric</span> on <a href="https://it-eb.com/plug-php-solutions-practical-problems-329/#comment-70">Plug-In PHP: 100 Power Solutions: Simple Solutions to Practical PHP Problems</a></li><li class="recentcomments"><span class="comment-author-link">iteb</span> on <a href="https://it-eb.com/learning-awk-programming-cutting-edge-text-processing-5/#comment-69">Learning AWK Programming: A fast, and simple cutting-edge utility for text-processing on the Unix-like environment</a></li><li class="recentcomments"><span class="comment-author-link">iteb</span> on <a href="https://it-eb.com/electronics-revolution-inventing-future-springer-19/#comment-68">The Electronics Revolution: Inventing the Future (Springer Praxis Books)</a></li><li class="recentcomments"><span class="comment-author-link">EB</span> on <a href="https://it-eb.com/electronics-revolution-inventing-future-springer-19/#comment-67">The Electronics Revolution: Inventing the Future (Springer Praxis Books)</a></li></ul></section><section id="categories-2" class="widget widget_categories"><h2 class="widget-title">Categories</h2>		<ul>
+	<li class="cat-item cat-item-19"><a href="https://it-eb.com/category/algorithms/" >Algorithms</a>
+</li>
+	<li class="cat-item cat-item-16"><a href="https://it-eb.com/category/big-data/" >Big Data</a>
+</li>
+	<li class="cat-item cat-item-35"><a href="https://it-eb.com/category/cloud-computing/" >Cloud Computing</a>
+</li>
+	<li class="cat-item cat-item-26"><a href="https://it-eb.com/category/computational-biology/" >Computational Biology</a>
+</li>
+	<li class="cat-item cat-item-31"><a href="https://it-eb.com/category/computer-science/" >Computer Science</a>
+</li>
+	<li class="cat-item cat-item-38"><a href="https://it-eb.com/category/computing/" >Computing</a>
+</li>
+	<li class="cat-item cat-item-46"><a href="https://it-eb.com/category/data-management/" >Data Management</a>
+</li>
+	<li class="cat-item cat-item-14"><a href="https://it-eb.com/category/data-mining/" >Data Mining</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://it-eb.com/category/databases/" >Databases</a>
+</li>
+	<li class="cat-item cat-item-45"><a href="https://it-eb.com/category/debugging-and-troubleshooting/" >Debugging and Troubleshooting</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="https://it-eb.com/category/designing/" >Designing</a>
+</li>
+	<li class="cat-item cat-item-41"><a href="https://it-eb.com/category/digital-design-media/" >Digital Design/Media</a>
+</li>
+	<li class="cat-item cat-item-37"><a href="https://it-eb.com/category/engineering/" >Engineering</a>
+</li>
+	<li class="cat-item cat-item-12"><a href="https://it-eb.com/category/game-development/" >Game Development</a>
+</li>
+	<li class="cat-item cat-item-33"><a href="https://it-eb.com/category/hacking/" >Hacking</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="https://it-eb.com/category/hardware/" >Hardware</a>
+</li>
+	<li class="cat-item cat-item-29"><a href="https://it-eb.com/category/image-processing/" >Image Processing</a>
+</li>
+	<li class="cat-item cat-item-47"><a href="https://it-eb.com/category/internet-of-things/" >Internet of Things</a>
+</li>
+	<li class="cat-item cat-item-15"><a href="https://it-eb.com/category/iot/" >IoT</a>
+</li>
+	<li class="cat-item cat-item-22"><a href="https://it-eb.com/category/linux/" >Linux</a>
+</li>
+	<li class="cat-item cat-item-32"><a href="https://it-eb.com/category/machine-learning/" >Machine Learning</a>
+</li>
+	<li class="cat-item cat-item-27"><a href="https://it-eb.com/category/management/" >Management</a>
+</li>
+	<li class="cat-item cat-item-34"><a href="https://it-eb.com/category/manual/" >Manual</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="https://it-eb.com/category/mobile-development/" >Mobile Development</a>
+</li>
+	<li class="cat-item cat-item-28"><a href="https://it-eb.com/category/netonets/" >NetoNets</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://it-eb.com/category/networking/" >Networking</a>
+</li>
+	<li class="cat-item cat-item-24"><a href="https://it-eb.com/category/operating-systems/" >Operating Systems</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="https://it-eb.com/category/programming/" >Programming</a>
+</li>
+	<li class="cat-item cat-item-18"><a href="https://it-eb.com/category/robotics/" >Robotics</a>
+</li>
+	<li class="cat-item cat-item-36"><a href="https://it-eb.com/category/sap/" >SAP</a>
+</li>
+	<li class="cat-item cat-item-43"><a href="https://it-eb.com/category/scripting/" >Scripting</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="https://it-eb.com/category/security/" >Security</a>
+</li>
+	<li class="cat-item cat-item-40"><a href="https://it-eb.com/category/seo/" >SEO</a>
+</li>
+	<li class="cat-item cat-item-30"><a href="https://it-eb.com/category/signal-processing/" >Signal Processing</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="https://it-eb.com/category/software/" >Software</a>
+</li>
+	<li class="cat-item cat-item-17"><a href="https://it-eb.com/category/software-development/" >Software Development</a>
+</li>
+	<li class="cat-item cat-item-25"><a href="https://it-eb.com/category/software-quality/" >Software Quality</a>
+</li>
+	<li class="cat-item cat-item-44"><a href="https://it-eb.com/category/sysadmin/" >Sysadmin</a>
+</li>
+	<li class="cat-item cat-item-13"><a href="https://it-eb.com/category/telecommunications/" >Telecommunications</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="https://it-eb.com/category/testing/" >Testing</a>
+</li>
+	<li class="cat-item cat-item-39"><a href="https://it-eb.com/category/tips-and-tricks/" >Tips and Tricks</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://it-eb.com/category/uncategorized/" >Uncategorized</a>
+</li>
+	<li class="cat-item cat-item-42"><a href="https://it-eb.com/category/version-control/" >Version Control</a>
+</li>
+	<li class="cat-item cat-item-2"><a href="https://it-eb.com/category/web-development/" >Web Development</a>
+</li>
+		</ul>
+</section>
+			</div>
+
+		</div>
+
+	</aside><!--/.sidebar-->
+
+
+				</div><!--/.container-->
+
+			</div><!--/.container-outer-->
+
+		</article>
+
+	</main>
+
+
+
+<footer id="footer" class="footer">
+	<div class="container">
+
+		<div class="copyright">
+
+			<p>
+				&copy;2018 <a href="https://it-eb.com">Technology and Engineering eBooks</a>			</p>
+
+							<p>
+					Powered by Wordpress. Theme: Coldbox.				</p>
+			
+		</div>
+
+		
+	</div><!--/.container-->
+
+	<a id="back-to-top" class="noscroll" href="#"><span class="chevron-up"></span></a>
+
+</footer>
+
+<div class="modal-search-form">
+<form method="get" class="search-form" action="https://it-eb.com/">
+	<input type="search" class="search-inner" name="s" placeholder="Title, ISBN, Author, Publisher, or whatever you come up with..." />
+	<button type="submit" class="search-submit"><i class="icon search"></i></button>
+</form>
+<div class="close-toggle"><span class="top"></span><span class="bottom"></span><span class="label">Close</span></div></div>
+
+
+<script type='text/javascript'>
+var renderInvisibleReCaptcha = function() {
+
+    for (var i = 0; i < document.forms.length; ++i) {
+        var form = document.forms[i];
+        var holder = form.querySelector('.inv-recaptcha-holder');
+
+        if (null === holder) continue;
+		holder.innerHTML = '';
+
+        (function(frm){
+			var cf7SubmitElm = frm.querySelector('.wpcf7-submit');
+            var holderId = grecaptcha.render(holder,{
+                'sitekey': '6LchVTgUAAAAAORGBFITAKda3kZT7sv3xgtP9n6n', 'size': 'invisible', 'badge' : 'bottomleft',
+                'callback' : function (recaptchaToken) {
+					((null !== cf7SubmitElm) && (typeof jQuery != 'undefined')) ? jQuery(frm).submit() : HTMLFormElement.prototype.submit.call(frm);
+                },
+                'expired-callback' : function(){grecaptcha.reset(holderId);}
+            });
+
+            frm.onsubmit = function (evt){evt.preventDefault();grecaptcha.execute(holderId);};
+
+			if(null !== cf7SubmitElm && (typeof jQuery != 'undefined') ){
+				jQuery(cf7SubmitElm).one('click', function(clickEvt){
+					clickEvt.preventDefault();
+					grecaptcha.execute(holderId);
+				});
+			}
+
+        })(form);
+    }
+};
+</script>
+<script type='text/javascript' async defer src='https://www.google.com/recaptcha/api.js?onload=renderInvisibleReCaptcha&#038;render=explicit&#038;hl=en'></script>
+<script type='text/javascript'>
+post_id = 1715;
+</script>
+<script type='text/javascript' src='http://it-eb.com/wp-content/themes/iteb/custom.js?ver=1.1'></script>
+<script type='text/javascript' src='http://it-eb.com/wp-includes/js/comment-reply.min.js?ver=4.8.2'></script>
+<script type='text/javascript' src='http://it-eb.com/wp-content/themes/coldbox/assets/js/cd-scripts.min.js?ver=1.2.7'></script>
+<script type='text/javascript'>
+jQuery(function($) { $('.entry img').parent('a').css({'box-shadow':'none'}); });
+</script>
+<script type='text/javascript' src='http://it-eb.com/wp-includes/js/imagesloaded.min.js?ver=3.2.0'></script>
+<script type='text/javascript' src='http://it-eb.com/wp-includes/js/masonry.min.js?ver=3.3.2'></script>
+<script type='text/javascript'>
+jQuery(window).on("load resize",function(){window.matchMedia("(max-width: 980px) and (min-width: 641px)").matches||jQuery("body").hasClass("bottom-sidebar-s1")?jQuery("#sidebar-s1 .sidebar-inner").imagesLoaded(function(){jQuery("#sidebar-s1 .sidebar-inner").masonry({itemSelector:".widget",percentPosition:!0,isAnimated:!0}),jQuery(".widget").css({position:"absolute"})}):jQuery(".widget").css({position:"",top:"",left:""})});
+</script>
+<script type='text/javascript' src='http://it-eb.com/wp-includes/js/wp-embed.min.js?ver=4.8.2'></script>
+</body></html>
+
