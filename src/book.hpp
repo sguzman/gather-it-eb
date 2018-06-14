@@ -7,6 +7,7 @@
 using ::std::string;
 using ::std::vector;
 using ::std::array;
+using ::std::tm;
 using ::std::experimental::optional;
 
 enum struct digits : unsigned char {
@@ -37,20 +38,21 @@ enum struct File_size : unsigned char {
 struct Book {
   const string name;
   const string img;
+  const tm date;
   const string desc;
   const string link;
 
   const vector<const string> categories;
   struct {
     const optional<string> publisher;
-    const optional<string> pub_date;
+    const optional<tm> pub_date;
 
     const optional<array<digits, 10>> isbn_10;
     const optional<array<digits, 13>> isbn_13;
 
-    const unsigned short pages;
+    const optional<unsigned short> pages;
 
-    const File_type type;
+    const optional<File_type> type;
     struct {
       const double size;
       const File_type format;
