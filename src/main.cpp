@@ -1,12 +1,11 @@
-#include <dirent.h>
+#include <boost/filesystem.hpp>
+#include <boost/range/iterator_range.hpp>
 #include <fstream>
 #include <gumbo.h>
 #include <iomanip>
 #include <iostream>
 #include <locale>
 #include <string_view>
-#include <sys/stat.h>
-#include <sys/types.h>
 #include <vector>
 #include <sstream>
 
@@ -30,20 +29,20 @@ using ::std::tm;
 using ::std::istringstream;
 using ::std::put_time;
 
-constexpr static inline const unsigned short limit{1302};
+constexpr static inline const unsigned short limit{1304};
 constexpr static inline const unsigned short offset{18};
-constexpr static inline const char* const dir{"./html/"};
+constexpr static inline const char* const base_dir{"./html/"};
 
-const static inline string base_dir{"http://23.95.221.108/"};
+const static inline string base_url{"http://23.95.221.108/"};
 
 static vector<Book> books{};
 
 static inline const string get_page(const unsigned short id) noexcept {
   if (id == 1) {
-    return Curl::get(base_dir);
+    return Curl::get(base_url);
   }
 
-  const string url{base_dir + "page/" + to_string(id) + "/"};
+  const string url{base_url + "page/" + to_string(id) + "/"};
   return Curl::get(url);
 }
 
@@ -77,8 +76,8 @@ static inline const GumboNode* link(__restrict const GumboNode* const node) noex
 }
 
 static inline bool exists(string_view filename) noexcept {
-  struct stat buffer{};
-  return stat(filename.data(), &buffer) == 0;
+  const boost::filesystem::path p{filename.data()};
+  return boost::filesystem::exists(p);
 }
 
 static inline const vector<const string> rake(const unsigned short n) noexcept {
@@ -109,9 +108,9 @@ static inline void update_files() noexcept {
     const vector<const string>& book_links{::rake(i)};
     for (const auto &iter : book_links) {
 
-      if (const string filepath{dir + iter + ".html"}; !exists(filepath)) {
+      if (const string filepath{base_dir + iter + ".html"}; !exists(filepath)) {
         cout << "Downloading " << filepath << endl;
-        const string link{base_dir + iter + "/"};
+        const string link{base_url + iter + "/"};
         const string html{Curl::get(link)};
 
         ofstream out_file{filepath};
@@ -183,59 +182,55 @@ static inline const string img(__restrict const GumboNode* const node) noexcept 
   const auto n11 = ::get_node(n10, img[10]);
 
   const string str{::gumbo_get_attribute(&n11->v.element.attributes, "src")->value};
-  const string path{base_dir + str.substr(offset)};
+  const string path{base_url + str.substr(offset)};
 
   return path;
 }
 
 static inline void update_model() noexcept {
-  DIR* dirp{opendir(dir)};
+  if (const boost::filesystem::path dir{base_dir}; boost::filesystem::is_directory(dir)) {
 
-  readdir(dirp);
-  readdir(dirp);
-  for (struct dirent* dp = readdir(dirp); dp != nullptr; dp = readdir(dirp)) {
-    const string name{dp->d_name};
-    const string path{dir + name};
-    ifstream input{path};
-    const string content{istreambuf_iterator<char>(input), istreambuf_iterator<char>()};
+    const boost::filesystem::directory_iterator iter{dir};
+    for (const auto& item : boost::make_iterator_range(iter)) {
+      ifstream input{item.path().string()};
+      const string content{istreambuf_iterator<char>{input}, istreambuf_iterator<char>{}};
 
-    GumboOutput* output{::gumbo_parse(content.c_str())};
+      GumboOutput* output{::gumbo_parse(content.c_str())};
 
-    const string ts{::title(output->root)};
-    cout << ts << endl;
+      const string ts{::title(output->root)};
+      cout << ts << endl;
 
-    const tm ds{::date(output->root)};
-    cout << put_time(&ds, "%c") << endl;
+      const tm ds{::date(output->root)};
+      cout << put_time(&ds, "%c") << endl;
 
-    const string is{::img(output->root)};
-    cout << is << endl;
+      const string is{::img(output->root)};
+      cout << is << endl;
 
-    auto node_1 = ::get_node(output->root, 2);
-    cout << ::gumbo_get_attribute(&node_1->v.element.attributes, "class")->value << endl;
-    auto node_2 = ::get_node(node_1, 3);
-    cout << ::gumbo_get_attribute(&node_2->v.element.attributes, "class")->value << endl;
-    auto node_3 = ::get_node(node_2, 1);
-    cout << ::gumbo_get_attribute(&node_3->v.element.attributes, "class")->value << endl;
-    auto node_4 = ::get_node(node_3, 3);
-    cout << ::gumbo_get_attribute(&node_4->v.element.attributes, "class")->value << endl;
-    auto node_5 = ::get_node(node_4, 1);
-    cout << ::gumbo_get_attribute(&node_5->v.element.attributes, "class")->value << endl;
-    auto node_6 = ::get_node(node_5, 1);
-    cout << ::gumbo_get_attribute(&node_6->v.element.attributes, "class")->value << endl;
-    auto node_7 = ::get_node(node_6, 1);
-    cout << ::gumbo_get_attribute(&node_7->v.element.attributes, "class")->value << endl;
-    auto node_8 = ::get_node(node_7, 1);
-    cout << ::gumbo_get_attribute(&node_8->v.element.attributes, "class")->value << endl;
-    auto node_9 = ::get_node(node_8, 3);
-    cout << ::gumbo_get_attribute(&node_9->v.element.attributes, "class")->value << endl;
-    auto node_10 = ::get_node(node_9, 4);
-    auto node_11 = ::get_node(node_10, 0);
+      auto node_1 = ::get_node(output->root, 2);
+      cout << ::gumbo_get_attribute(&node_1->v.element.attributes, "class")->value << endl;
+      auto node_2 = ::get_node(node_1, 3);
+      cout << ::gumbo_get_attribute(&node_2->v.element.attributes, "class")->value << endl;
+      auto node_3 = ::get_node(node_2, 1);
+      cout << ::gumbo_get_attribute(&node_3->v.element.attributes, "class")->value << endl;
+      auto node_4 = ::get_node(node_3, 3);
+      cout << ::gumbo_get_attribute(&node_4->v.element.attributes, "class")->value << endl;
+      auto node_5 = ::get_node(node_4, 1);
+      cout << ::gumbo_get_attribute(&node_5->v.element.attributes, "class")->value << endl;
+      auto node_6 = ::get_node(node_5, 1);
+      cout << ::gumbo_get_attribute(&node_6->v.element.attributes, "class")->value << endl;
+      auto node_7 = ::get_node(node_6, 1);
+      cout << ::gumbo_get_attribute(&node_7->v.element.attributes, "class")->value << endl;
+      auto node_8 = ::get_node(node_7, 1);
+      cout << ::gumbo_get_attribute(&node_8->v.element.attributes, "class")->value << endl;
+      auto node_9 = ::get_node(node_8, 3);
+      cout << ::gumbo_get_attribute(&node_9->v.element.attributes, "class")->value << endl;
+      auto node_10 = ::get_node(node_9, 4);
+      auto node_11 = ::get_node(node_10, 0);
 
 
-    gumbo_destroy_output(&kGumboDefaultOptions, output);
+      gumbo_destroy_output(&kGumboDefaultOptions, output);
+    }
   }
-
-  closedir(dirp);
 }
 
 int main () {
